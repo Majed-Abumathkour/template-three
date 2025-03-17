@@ -191,6 +191,7 @@ header .main-nav > li > a {
 
 @media (max-width: 767px) {
   header .main-nav > li > a {
+    font-size: 0.8rem;
     height: 30px;
     padding: 10px;
     justify-content: flex-start;
@@ -242,7 +243,7 @@ header .meag-menu {
 header .main-nav > li:last-of-type:hover .meag-menu {
   pointer-events: auto;
   visibility: visible;
-  top: 100%;
+  top: calc(100% + 1px);
   opacity: 1;
 }
 
@@ -272,6 +273,12 @@ header .meag-menu .other-links li:not(:last-of-type) {
   border-bottom: 1px solid var(--secondary-background-color);
 }
 
+@media (max-width: 767px) {
+  header .meag-menu .other-links:first-of-type {
+    border-bottom: 1px solid var(--secondary-background-color);
+  }
+}
+
 header .meag-menu .other-links li:after {
   content: "";
   position: absolute;
@@ -292,8 +299,14 @@ header .meag-menu .other-links li a {
   color: var(--main-color);
   font-size: 1rem;
   display: block;
-  padding: 10px;
+  padding: 15px 10px;
   font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  header .meag-menu .other-links li a {
+    padding: 5px;
+  }
 }
 
 header .meag-menu .other-links li a i {
