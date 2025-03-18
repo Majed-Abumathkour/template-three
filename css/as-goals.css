@@ -29,32 +29,6 @@
   --header-height: 70px;
 }
 
-/* Animation */
-@keyframes up-and-down {
-  from {
-    transform: translateY(-10px);
-  }
-
-  to {
-    transform: translateY(10px);
-  }
-}
-
-@keyframes bouncing {
-  0%,
-  10%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0);
-  }
-  40%,
-  60% {
-    transform: translateY(-20px);
-  }
-}
-
 /* ______________________________________ End Variables ______________________________________ */
 
 /* ______________________________________ Start Global Rules ______________________________________ */
@@ -125,6 +99,66 @@ input[type="submit"] {
 }
 
 /* ______________________________________ End Global Rules ______________________________________ */
+
+/* ______________________________________ Start Components ______________________________________ */
+
+.main-title {
+  width: fit-content;
+  border: 2px solid black;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.main-title:hover {
+  color: white;
+  border: none;
+  transition-delay: var(--main-transition-duration) / 2;
+}
+
+.main-title::before,
+.main-title::after {
+  content: "";
+  position: absolute;
+  background: var(--main-color);
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  border: 1px solid black;
+  top: 50%;
+  transform: translateY(-50%);
+  transition-duration: var(--main-transition-duration);
+  z-index: -1;
+}
+
+.main-title::before {
+  left: -40px;
+}
+
+.main-title::after {
+  right: -40px;
+}
+
+.main-title:hover::after,
+.main-title:hover::before {
+  border: none;
+  border-radius: 0;
+  width: calc(50% + 1px);
+  height: 100%;
+}
+
+.main-title:hover::before {
+  left: 0;
+}
+
+.main-title:hover::after {
+  right: 0;
+}
+
+/* ______________________________________ End Components ______________________________________ */
 
 /* ______________________________________ Start Header ______________________________________ */
 
@@ -401,7 +435,7 @@ header .meag-menu .other-links li a i {
 .landing .go-down {
   color: var(--main-color);
   position: absolute;
-  bottom: 30px;
+  /* bottom: 30px; */
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
@@ -421,3 +455,30 @@ header .meag-menu .other-links li a i {
 }
 
 /* ______________________________________ End Landing ______________________________________ */
+
+/* ______________________________________ Start Animation ______________________________________ */
+@keyframes up-and-down {
+  from {
+    transform: translateY(-10px);
+  }
+
+  to {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes bouncing {
+  0%,
+  10%,
+  20%,
+  50%,
+  80%,
+  100% {
+    bottom: 40px;
+  }
+  40%,
+  60% {
+    bottom: 20px;
+  }
+}
+/* ______________________________________ End Animation ______________________________________ */
