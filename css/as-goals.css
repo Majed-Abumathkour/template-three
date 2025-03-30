@@ -11,6 +11,7 @@
   --main-color: #2196f3;
   --main-color-alt: #1787e0;
   --text-color: #666666;
+  /* backgrounds */
   --main-background-color: #fafafa;
   --secondary-background-color: #ececec;
   /* paddings */
@@ -540,6 +541,61 @@ header .meag-menu .other-links li a i {
 
 /* ______________________________________ End Articles ______________________________________ */
 
+/* ______________________________________ Start Galary ______________________________________ */
+
+.galary {
+  background-color: var(--secondary-background-color);
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.galary .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.galary .box {
+  background-color: white;
+  padding: 15px;
+  box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%),
+    0px 2px 4px 0px rgb(0 0 0 / 12%);
+}
+
+.galary .box .image {
+  overflow: hidden;
+  position: relative;
+}
+
+.galary .box .image:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  background-color: rgba(255 255 255 / 20%);
+  z-index: 1;
+  opacity: 0;
+
+}
+
+.galary .box:hover .image:after {
+  animation: flashing calc(var(--main-animation-duration) / 2);
+}
+
+.galary .box img {
+  max-width: 100%;
+  transition-duration: var(--main-transition-duration);
+}
+
+.galary .box:hover .image img {
+ transform: rotate(5deg) scale(1.25);
+}
+
+/* ______________________________________ End Galary ______________________________________ */
+
 /* ______________________________________ Start Animation ______________________________________ */
 @keyframes up-and-down {
   from {
@@ -572,6 +628,18 @@ header .meag-menu .other-links li a i {
   }
   50% {
     right: 20px;
+  }
+}
+
+@keyframes flashing {
+  0%, 40% {
+    opacity: 1
+  }
+
+  100% {
+    opacity: 0;
+    width: 200%;
+    height: 200%;
   }
 }
 /* ______________________________________ End Animation ______________________________________ */
