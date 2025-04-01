@@ -11,6 +11,7 @@
   --main-color: #2196f3;
   --main-color-alt: #1787e0;
   --text-color: #666666;
+  --border-color: #ccc;
   /* backgrounds */
   --main-background-color: #fafafa;
   --secondary-background-color: #ececec;
@@ -26,7 +27,7 @@
   --secondary-animation-duration: 1.5s;
   /* border-radius */
   --main-border-radius: 5px;
-  --secondary-border-radius: 5px;
+  --secondary-border-radius: 3px;
   /* height */
   --header-height: 70px;
 }
@@ -578,7 +579,6 @@ header .meag-menu .other-links li a i {
   background-color: rgba(255 255 255 / 20%);
   z-index: 1;
   opacity: 0;
-
 }
 
 .galary .box:hover .image:after {
@@ -591,10 +591,192 @@ header .meag-menu .other-links li a i {
 }
 
 .galary .box:hover .image img {
- transform: rotate(5deg) scale(1.25);
+  transform: rotate(5deg) scale(1.25);
 }
 
 /* ______________________________________ End Galary ______________________________________ */
+
+/* ______________________________________ Start Features ______________________________________ */
+
+.features {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: white;
+}
+
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 50px;
+}
+
+.features .feature {
+  border: 1px solid var(--border-color);
+  text-align: center;
+  box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%),
+    0px 2px 4px 0px rgb(0 0 0 / 12%);
+}
+
+.features .feature .img-holder {
+  position: relative;
+  overflow: hidden;
+}
+
+.features .feature .img-holder::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-color: transparent transparent white transparent;
+  border-style: solid;
+  border-width: 0px 0px 150px 700px;
+  transition-duration: calc(var(--main-transition-duration) / 2);
+  z-index: 3;
+}
+
+.features .feature:hover .img-holder::before {
+  left: 0;
+  border-width: 0px 700px 100px 0px;
+}
+
+.features .feature .img-holder::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -1px;
+  left: 0;
+  opacity: 0.35;
+  transition-duration: calc(var(--main-transition-duration) / 2);
+}
+
+.features .feature:hover .img-holder::after {
+  opacity: 0.3;
+}
+
+.features .quality .img-holder::after {
+  background-color: orangered;
+}
+
+.features .time .img-holder::after {
+  background-color: green;
+}
+
+.features .passion .img-holder::after {
+  background-color: var(--main-color);
+}
+
+.features .feature .img-holder img {
+  max-width: 100%;
+}
+
+.features .feature h2 {
+  width: fit-content;
+  margin: 0 auto 40px;
+  font-size: 40px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.features .feature h2:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 80%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition-duration: calc(var(--main-transition-duration) / 2);
+}
+
+.features .feature:hover h2:after {
+  width: 120%;
+}
+
+.features .quality h2:after {
+  background-color: orangered;
+}
+
+.features .time h2:after {
+  background-color: green;
+}
+
+.features .passion h2:after {
+  background-color: var(--main-color);
+}
+
+.features .feature p {
+  padding: 0 30px;
+  margin-bottom: 30px;
+  color: var(--text-color);
+  font-size: 20px;
+  line-height: var(--paragraph-line-height);
+}
+
+.features .feature a {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 22px;
+  background: transparent;
+  display: block;
+  max-width: fit-content;
+  margin: 0 auto 20px;
+  padding: 10px 30px;
+  border: 3px solid transparent;
+  border-radius: var(--main-border-radius);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  transition-duration: calc(var(--main-transition-duration) / 2);
+}
+
+.features .feature:hover a {
+  color: white;
+}
+
+.features .feature a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  z-index: -1;
+  transition-duration: calc(var(--main-transition-duration) / 2);
+}
+
+.features .feature:hover a::after {
+  width: 100%;
+}
+
+.features .quality a::after {
+  background-color: orangered;
+}
+
+.features .time a::after {
+  background-color: green;
+}
+
+.features .passion a::after {
+  background-color: var(--main-color);
+}
+
+.features .quality a {
+  color: orangered;
+  border-color: orangered;
+}
+
+.features .time a {
+  color: green;
+  border-color: green;
+}
+
+.features .passion a {
+  color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+/* ______________________________________ End Features ______________________________________ */
 
 /* ______________________________________ Start Animation ______________________________________ */
 @keyframes up-and-down {
@@ -632,8 +814,9 @@ header .meag-menu .other-links li a i {
 }
 
 @keyframes flashing {
-  0%, 40% {
-    opacity: 1
+  0%,
+  40% {
+    opacity: 1;
   }
 
   100% {
