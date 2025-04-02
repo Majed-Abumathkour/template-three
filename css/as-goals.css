@@ -671,6 +671,7 @@ header .meag-menu .other-links li a i {
 }
 
 .features .feature h2 {
+  text-transform: capitalize;
   width: fit-content;
   margin: 0 auto 40px;
   font-size: 40px;
@@ -777,6 +778,72 @@ header .meag-menu .other-links li a i {
 }
 
 /* ______________________________________ End Features ______________________________________ */
+
+/* ______________________________________ Start Testimonials ______________________________________ */
+
+.testimonials {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--secondary-background-color);
+}
+
+.testimonials .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.testimonial {
+  background-color: white;
+  padding: 20px ;
+  border-radius: var(--main-border-radius);
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials .testimonial img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(-50%);
+  width: 100px;
+  border-radius: 50%;
+  outline: 10px solid var(--secondary-background-color);
+}
+
+.testimonials .testimonial h3 {
+  color: var(--main-color);
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  transition-duration: var(--main-transition-duration);
+}
+
+.testimonials .testimonial:hover h3 {
+  color: var(--main-color-alt);
+}
+
+.testimonials .testimonial span {
+  text-transform: capitalize;
+  color: var(--text-color);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.testimonials .testimonial .rate {
+  margin-bottom: 10px;
+}
+
+.testimonials .testimonial .rate .filled {
+  color: #ffc107;
+}
+
+.testimonials .testimonial p {
+  color: var(--text-color);
+  font-size: 0.9rem;
+  line-height: var(--secondary-line-height);
+}
+
+/* ______________________________________ End Testimonials ______________________________________ */
 
 /* ______________________________________ Start Animation ______________________________________ */
 @keyframes up-and-down {
