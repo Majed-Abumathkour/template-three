@@ -793,12 +793,35 @@ header .meag-menu .other-links li a i {
   gap: 40px;
 }
 
-.testimonial {
+.testimonials .testimonial {
   background-color: white;
-  padding: 20px ;
+  padding: 20px;
   border-radius: var(--main-border-radius);
   position: relative;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition-duration: var(--main-transition-duration);
+  z-index: 0;
+}
+
+.testimonials .testimonial:hover {
+  color: white;
+}
+
+.testimonials .testimonial:after {
+  content: "";
+  position: absolute;
+  background-color: var(--main-color);
+  border-radius: inherit;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  transition-duration: var(--main-transition-duration);
+  z-index: -1;
+}
+
+.testimonials .testimonial:hover:after {
+  width: 100%;
 }
 
 .testimonials .testimonial img {
@@ -809,6 +832,11 @@ header .meag-menu .other-links li a i {
   width: 100px;
   border-radius: 50%;
   outline: 10px solid var(--secondary-background-color);
+  transition-duration: var(--main-transition-duration);
+}
+
+.testimonials .testimonial:hover img {
+  top: 25px;
 }
 
 .testimonials .testimonial h3 {
@@ -819,7 +847,7 @@ header .meag-menu .other-links li a i {
 }
 
 .testimonials .testimonial:hover h3 {
-  color: var(--main-color-alt);
+  color: white;
 }
 
 .testimonials .testimonial span {
@@ -827,6 +855,11 @@ header .meag-menu .other-links li a i {
   color: var(--text-color);
   display: block;
   margin-bottom: 10px;
+  transition-duration: var(--main-transition-duration);
+}
+
+.testimonials .testimonial:hover span {
+  color: white;
 }
 
 .testimonials .testimonial .rate {
@@ -841,9 +874,158 @@ header .meag-menu .other-links li a i {
   color: var(--text-color);
   font-size: 0.9rem;
   line-height: var(--secondary-line-height);
+  transition-duration: var(--main-transition-duration);
+}
+
+.testimonials .testimonial:hover p {
+  color: white;
 }
 
 /* ______________________________________ End Testimonials ______________________________________ */
+
+/* ______________________________________ Start Favorite Games ______________________________________ */
+
+.favorite-games {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.favorite-games .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 100px 50px;
+}
+
+.favorite-games .box {
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.favorite-games .box::after,
+.favorite-games .box::before {
+  content: "";
+  position: absolute;
+  border-radius: var(--main-border-radius);
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+
+.favorite-games .box::after {
+  width: calc(100% - 50px);
+  background-color: var(--secondary-background-color);
+  z-index: -2;
+}
+
+.favorite-games .box::before {
+  width: 0%;
+  background-color: var(--main-color);
+  z-index: -1;
+  transition-duration: var(--main-transition-duration);
+  transition-timing-function: linear;
+  transition-delay: calc(var(--main-transition-duration) - 0.3s);
+}
+
+.favorite-games .box:hover:before {
+  width: calc(100% - 50px);
+  transition-delay: 0s;
+}
+
+.favorite-games .box .data {
+  padding-top: 50px;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.favorite-games .box .data::after {
+  content: "";
+  position: absolute;
+  background-color: var(--main-color);
+  border-radius: var(--main-border-radius) 0 0 var(--main-border-radius);
+  top: 50px;
+  right: calc(100% - 50px);
+  width: 0;
+  height: calc(100% - 50px);
+  z-index: -2;
+  transition-timing-function: linear;
+  transition-duration: calc(var(--main-transition-duration) / 2);
+  transition-delay: 0s;
+}
+
+.favorite-games .box:hover .data::after {
+  top: 45px;
+  height: calc(100% - 40px);
+  width: 55px;
+  transition-delay: calc(var(--main-transition-duration)  - 0.12s);
+}
+
+.favorite-games .box .data img {
+  width: calc(100% - 50px);
+  border-radius: var(--main-border-radius);
+  transition-duration: var(--main-transition-duration);
+}
+
+.favorite-games .box:hover .data img {
+  filter: grayscale(50%);
+}
+
+.favorite-games .box .data .social-links {
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+}
+
+.favorite-games .box .data .social-links a {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.favorite-games .box .data .social-links i {
+  color: var(--main-color);
+  transition-duration: var(--main-transition-duration);
+}
+
+.favorite-games .box:hover .data .social-links i {
+  color: white;
+  transition-duration: var(--main-transition-duration);
+}
+
+.favorite-games .box .data .social-links a:hover i {
+  color: black;
+}
+
+.favorite-games .box .info {
+  padding-left: 65px;
+}
+
+.favorite-games .box .info h3 {
+  color: var(--main-color);
+  margin: 10px 0;
+  transition-duration: var(--main-transition-duration);
+}
+
+.favorite-games .box:hover .info h3 {
+  color: white;
+}
+
+.favorite-games .box .info p {
+  color: var(--text-color);
+  transition-duration: var(--main-transition-duration);
+}
+
+.favorite-games .box:hover .info p {
+  color: white;
+}
+
+/* ______________________________________ End Favorite Games ______________________________________ */
 
 /* ______________________________________ Start Animation ______________________________________ */
 @keyframes up-and-down {
