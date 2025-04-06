@@ -1007,6 +1007,7 @@ header .meag-menu .other-links li a i {
 }
 
 .favorite-games .box .info h3 {
+  text-transform: capitalize;
   color: var(--main-color);
   margin: 10px 0;
   transition-duration: var(--main-transition-duration);
