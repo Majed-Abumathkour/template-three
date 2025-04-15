@@ -1131,6 +1131,106 @@ header .meag-menu .other-links li a i {
 
 /* ______________________________________ End Services Section ______________________________________ */
 
+/* ______________________________________ Start My-Skills Section ______________________________________ */
+
+.my-skills {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.my-skills .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.my-skills img {
+  padding-top: 40px;
+}
+
+@media (max-width: 991px) {
+  .my-skills img {
+    width: 400px;
+  }
+}
+
+@media (max-width: 767px) {
+  .my-skills img {
+    display: none;
+  }
+}
+
+.my-skills .skills {
+  flex: 1;
+}
+
+.my-skills .skills .skill {
+  display: flex;
+  flex-direction: column;
+}
+
+.my-skills .skills .skill:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+.my-skills .skills .skill .skill-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.my-skills .skills .skill .skill-info h3 {
+  padding-left: 10px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: var(--main-transition-duration);
+}
+
+.my-skills .skills .skill:hover .skill-info h3 {
+  color: var(--main-color);
+}
+
+.my-skills .skills .skill .skill-info h3 i {
+  margin-right: 10px;
+  font-size: 2rem;
+}
+
+.my-skills .skills .skill .skill-info span {
+  display: block;
+  font-weight: bold;
+  margin-right: 10px;
+  padding: 3px 5px;
+  border: 1px solid #ccc;
+  border-radius: var(--secondary-border-radius);
+  font-size: 0.8rem;
+  color: var(--main-color);
+  transition-duration: var(--main-transition-duration);
+}
+
+.my-skills .skills .skill:hover .skill-info span {
+  color: white;
+  background-color: var(--main-color);
+}
+
+.my-skills .skills .skill .progress {
+  flex-grow: 1;
+  background-color: var(--secondary-background-color);
+  height: 30px;
+  position: relative;
+}
+
+.my-skills .skills .skill .progress span {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* ______________________________________ End My-Skills Section ______________________________________ */
+
 /* ______________________________________ Start Animation ______________________________________ */
 @keyframes up-and-down {
   from {
