@@ -827,11 +827,14 @@ header .meag-menu .other-links li a i {
 }
 
 .testimonials .testimonial img {
+  object-fit: cover;
+  background-color: var(--secondary-background-color);
   position: absolute;
   top: 0;
   right: 0;
   transform: translateY(-50%);
   width: 100px;
+  height: 100px;
   border-radius: 50%;
   outline: 10px solid var(--secondary-background-color);
   transition-duration: var(--main-transition-duration);
