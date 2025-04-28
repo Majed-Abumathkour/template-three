@@ -10,7 +10,7 @@
   /* colors */
   --main-color: #2196f3;
   --main-color-alt: #1787e0;
-  --text-color: #666666;
+  --text-color: #777;
   --border-color: #ccc;
   /* backgrounds */
   --main-background-color: #fafafa;
@@ -221,6 +221,7 @@ header .main-nav {
 }
 
 header .main-nav > li > a {
+  text-transform: capitalize;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -337,6 +338,7 @@ header .meag-menu .other-links li:hover::after {
 }
 
 header .meag-menu .other-links li a {
+  text-transform: capitalize;
   color: var(--main-color);
   font-size: 1rem;
   display: block;
@@ -1233,6 +1235,101 @@ header .meag-menu .other-links li a i {
 }
 
 /* ______________________________________ End My-Skills Section ______________________________________ */
+
+/* ______________________________________ Start My-Works Section ______________________________________ */
+
+.my-works {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--secondary-background-color);
+}
+
+.my-works .container {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+@media (max-width: 991px) {
+  .my-works .main-image {
+    display: none;
+  }
+}
+
+.my-works .works {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.my-works .works .work {
+  border-radius: var(--main-border-radius);
+  border: 2px solid white;
+  background-color: #f5f5f5;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.my-works .works .work:after {
+  content: "";
+  position: absolute;
+  background-color: var(--secondary-background-color);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  transition-duration: var(--main-transition-duration);
+  z-index: -1;
+}
+
+.my-works .works .work:hover:after {
+  width: 100%;
+  height: 100%;
+}
+
+.my-works .works .work img {
+  width: 65px;
+}
+
+.my-works .works .work .text h3 {
+  font-size: 1.2rem;
+  color: var(--main-color);
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.my-works .works .work .text p {
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  color: var(--text-color);
+  line-height: var(--secondary-line-height);
+}
+
+.my-works .works .work .text p a {
+  font-size: 0.7rem;
+  margin-top: 5px;
+  align-self: flex-end;
+  color: white;
+  background-color: var(--main-color);
+  padding: 5px 10px;
+  border-radius: var(--main-border-radius);
+  transition-duration: var(--main-transition-duration);
+}
+
+.my-works .works .work:hover .text p a {
+  color: var(--main-color);
+  background-color: #f5f5f5;
+}
+
+/* ______________________________________ End My-Works Section ______________________________________ */
 
 /* ______________________________________ Start Animation ______________________________________ */
 @keyframes up-and-down {
