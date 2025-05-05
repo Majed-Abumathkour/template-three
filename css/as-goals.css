@@ -1151,6 +1151,8 @@ header .meag-menu .other-links li a i {
 
 .my-skills img {
   padding-top: 40px;
+  animation: up-and-down var(--main-animation-duration) linear infinite
+    alternate;
 }
 
 @media (max-width: 991px) {
@@ -1250,6 +1252,11 @@ header .meag-menu .other-links li a i {
   gap: 100px;
 }
 
+.my-works .main-image {
+  animation: up-and-down var(--main-animation-duration) linear infinite
+    alternate;
+}
+
 @media (max-width: 991px) {
   .my-works .main-image {
     display: none;
@@ -1331,14 +1338,213 @@ header .meag-menu .other-links li a i {
 
 /* ______________________________________ End My-Works Section ______________________________________ */
 
+/* ______________________________________ Start PES-Career Section ______________________________________ */
+
+.pes-career {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.pes-career .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+}
+
+.pes-career .career {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+@media (max-width: 991px) {
+  .pes-career .career {
+    flex-direction: column;
+  }
+}
+
+.pes-career .career .career-image {
+  min-width: 300px;
+  height: 300px;
+  animation: up-and-down var(--main-animation-duration) linear infinite
+    alternate;
+  position: relative;
+}
+
+.pes-career .career .career-image::before {
+  content: "";
+  position: absolute;
+  background-color: var(--main-color);
+  border-radius: var(--main-border-radius);
+  width: 35%;
+  height: calc(100% + 30px);
+  left: -15px;
+  top: -15px;
+  transition-duration: var(--main-transition-duration);
+  z-index: -1;
+  animation: shrink-and-grow var(--main-animation-duration) linear infinite alternate;
+}
+
+.pes-career .career .career-image::after {
+  content: "";
+  position: absolute;
+  background-color: var(--main-color);
+  border-radius: var(--main-border-radius);
+  width: 40%;
+  height: 40%;
+  bottom: -15px;
+  right: -15px;
+  transition-duration: var(--main-transition-duration);
+  z-index: -1;
+  animation: grow-and-shrink var(--main-animation-duration) linear infinite alternate;
+}
+
+.pes-career .career .career-image img {
+  border-radius: var(--main-border-radius);
+  width: 100%;
+  height: 100%;
+}
+
+.pes-career .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 30px;
+}
+
+.pes-career .info .counter {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.pes-career .info .counter .unit {
+  border: 1px solid #d4d4d4;
+  border-radius: var(--main-border-radius);
+  transition-duration: var(--main-transition-duration);
+}
+
+.pes-career .info .counter .unit:hover {
+  border-color: var(--main-color);
+}
+
+.pes-career .info .counter .unit span {
+  display: block;
+}
+
+.pes-career .info .counter .unit span:first-of-type {
+  color: var(--main-color);
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-bottom: 1px solid #d4d4d4;
+  transition-duration: var(--main-transition-duration);
+}
+
+.pes-career .info .counter .unit:hover span:first-of-type {
+  border-color: var(--main-color);
+}
+
+.pes-career .info .counter .unit span:last-of-type {
+  font-size: 0.7rem;
+  padding: 5px 10px;
+}
+
+.pes-career .info .title {
+  font-size: 1.5rem;
+}
+
+.pes-career .info .details {
+  color: var(--text-color);
+  line-height: var(--secondary-line-height);
+}
+
+/* ------------------------ Start Email Section ------------------------ */
+
+.pes-career .join-us {
+  width: 700px;
+  display: flex;
+  gap: 20px;
+  background-color: var(--secondary-background-color);
+  padding: 30px;
+  border-radius: 40px;
+}
+
+@media (max-width: 767px) {
+  .pes-career .join-us {
+    width: 100%;
+    flex-direction: column;
+    border-radius: var(--main-border-radius);
+  }
+}
+
+.pes-career .join-us input {
+  padding: 10px 20px;
+  border-radius: inherit;
+}
+
+.pes-career .join-us input[type="email"] {
+  flex-grow: 1;
+  border: 1px solid var(--main-color);
+  caret-color: var(--main-color);
+  color: var(--main-color);
+}
+
+.pes-career .join-us input[type="email"]:focus {
+  outline: none;
+}
+
+.pes-career .join-us input[type="email"]::placeholder {
+  transition-duration: var(--main-transition-duration);
+}
+
+.pes-career .join-us input[type="email"]:focus::placeholder {
+  opacity: 0;
+}
+
+.pes-career .join-us input[type="submit"] {
+  font-weight: bold;
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  transition-duration: var(--main-transition-duration);
+}
+
+.pes-career .join-us input[type="submit"]:hover {
+  background-color: var(--main-color-alt);
+}
+
+/* ------------------------ End Email Section ------------------------ */
+
+/* ______________________________________ End PES-Career Section ______________________________________ */
+
 /* ______________________________________ Start Animation ______________________________________ */
 @keyframes up-and-down {
-  from {
+  0% {
     transform: translateY(-10px);
   }
 
-  to {
+  50% {
+    transform: translateY(0px);
+  }
+
+  100% {
     transform: translateY(10px);
+  }
+}
+
+@keyframes grow-and-shrink {
+  100% {
+    width: 50%;
+    height: 50%;
+  }
+}
+
+@keyframes shrink-and-grow {
+  100% {
+    width: 25%
   }
 }
 
@@ -1378,4 +1584,5 @@ header .meag-menu .other-links li a i {
     height: 200%;
   }
 }
+
 /* ______________________________________ End Animation ______________________________________ */
