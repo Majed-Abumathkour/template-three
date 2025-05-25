@@ -12,6 +12,10 @@
   --main-color-alt: #1787e0;
   --text-color: #777;
   --border-color: #ccc;
+  --light-color: #eee;
+  /* shadows */
+  --main-box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%),
+    0px 2px 4px 0px rgb(0 0 0 / 12%);
   /* backgrounds */
   --main-background-color: #fafafa;
   --secondary-background-color: #ececec;
@@ -563,8 +567,7 @@ header .meag-menu .other-links li a i {
 .galary .box {
   background-color: white;
   padding: 15px;
-  box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%),
-    0px 2px 4px 0px rgb(0 0 0 / 12%);
+  box-shadow: var(--main-box-shadow);
 }
 
 .galary .box .image {
@@ -617,8 +620,7 @@ header .meag-menu .other-links li a i {
 .features .feature {
   border: 1px solid var(--border-color);
   text-align: center;
-  box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%),
-    0px 2px 4px 0px rgb(0 0 0 / 12%);
+  box-shadow: var(--main-box-shadow);
 }
 
 .features .feature .img-holder {
@@ -802,7 +804,7 @@ header .meag-menu .other-links li a i {
   padding: 20px;
   border-radius: var(--main-border-radius);
   position: relative;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--main-box-shadow);
   transition-duration: var(--main-transition-duration);
   z-index: 0;
 }
@@ -1052,7 +1054,7 @@ header .meag-menu .other-links li a i {
 .services .service {
   position: relative;
   background-color: white;
-  box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.13), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: var(--main-box-shadow);
   text-align: center;
   transition-duration: var(--main-transition-duration);
   counter-increment: services;
@@ -1383,7 +1385,8 @@ header .meag-menu .other-links li a i {
   top: -15px;
   transition-duration: var(--main-transition-duration);
   z-index: -1;
-  animation: shrink-and-grow var(--main-animation-duration) linear infinite alternate;
+  animation: shrink-and-grow var(--main-animation-duration) linear infinite
+    alternate;
 }
 
 .pes-career .career .career-image::after {
@@ -1397,7 +1400,8 @@ header .meag-menu .other-links li a i {
   right: -15px;
   transition-duration: var(--main-transition-duration);
   z-index: -1;
-  animation: grow-and-shrink var(--main-animation-duration) linear infinite alternate;
+  animation: grow-and-shrink var(--main-animation-duration) linear infinite
+    alternate;
 }
 
 .pes-career .career .career-image img {
@@ -1520,6 +1524,167 @@ header .meag-menu .other-links li a i {
 
 /* ______________________________________ End PES-Career Section ______________________________________ */
 
+/* ______________________________________ Start Compitions Won Section ______________________________________ */
+
+.achievements {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--secondary-background-color);
+}
+
+.achievements .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--main-grid-gap);
+}
+
+.achievements .compition {
+  box-shadow: var(--main-box-shadow);
+  padding: 30px 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.achievements .compition:before,
+.achievements .compition:after {
+  content: "";
+  position: absolute;
+  background-color: var(--secondary-background-color);
+  width: 100%;
+  height: 50%;
+  z-index: -1;
+  transition-duration: var(--main-transition-duration);
+}
+
+.achievements .compition:before {
+  left: -100%;
+  top: 0;
+}
+
+.achievements .compition:hover:before {
+  left: 0;
+}
+
+.achievements .compition:after {
+  right: -100%;
+  bottom: 0;
+}
+
+.achievements .compition:hover:after {
+  right: 0;
+}
+
+@media (min-width: 1200px) {
+  .achievements .compition.most-won {
+    top: -20px;
+  }
+}
+
+.achievements .compition.most-won .label {
+  display: block;
+  width: 40px;
+  writing-mode: vertical-rl;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: white;
+  background-color: var(--main-color);
+  padding: 20px 10px;
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+
+.achievements .compition.most-won .label:before,
+.achievements .compition.most-won .label:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  border-style: solid;
+  border-width: 10px;
+}
+
+.achievements .compition.most-won .label:after {
+  left: 0;
+  border-color: var(--main-color) transparent transparent var(--main-color);
+}
+
+.achievements .compition.most-won .label:before {
+  right: 0;
+  border-color: var(--main-color) var(--main-color) transparent transparent;
+}
+
+.achievements .compition .name {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  margin-bottom: 70px;
+}
+
+.achievements .compition img {
+  width: 150px;
+}
+
+.achievements .compition .number-won {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.achievements .compition .number-won :first-child {
+  font-size: 4rem;
+  color: var(--main-color);
+}
+
+.achievements .compition .number-won :last-child {
+  text-transform: capitalize;
+  color: var(--text-color);
+}
+
+.achievements .compition .seasons-of-winning {
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.achievements .compition .seasons-of-winning li {
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  border-top: 1px solid var(--light-color);
+}
+
+.achievements .compition .seasons-of-winning li:before {
+  font-weight: 900; 
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c";
+  color: var(--main-color);
+  margin: 0 15px;
+}
+
+.achievements .compition .more-details {
+  text-transform: capitalize;
+  color: var(--main-color);
+  font-weight: bold;
+  display: block;
+  padding: 15px 20px;
+  border: 2px solid var(--main-color);
+  border-radius: var(--main-border-radius);
+  position: absolute;
+  bottom: 30px;
+  transition-duration: var(--main-transition-duration);
+}
+
+.achievements .compition .more-details:hover {
+  background-color: var(--main-color-alt);
+  color: white;
+}
+
+/* ______________________________________ End Compitions Won Section ______________________________________ */
+
 /* ______________________________________ Start Animation ______________________________________ */
 @keyframes up-and-down {
   0% {
@@ -1544,7 +1709,7 @@ header .meag-menu .other-links li a i {
 
 @keyframes shrink-and-grow {
   100% {
-    width: 25%
+    width: 25%;
   }
 }
 
