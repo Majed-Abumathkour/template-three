@@ -1685,6 +1685,80 @@ header .meag-menu .other-links li a i {
 
 /* ______________________________________ End Compitions Won Section ______________________________________ */
 
+/* ______________________________________ Start Certificates Section ______________________________________ */
+
+.certificates {
+  padding: var(--section-padding) 0px;
+}
+
+.certificates .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.certificates .image {
+  height: 500px;
+  display: flex;
+  /* border: 10px solid var(--main-color); */
+  border-radius: var(--main-border-radius);
+  /* overflow: hidden; */
+  position: relative;
+  z-index: 0;
+}
+
+@media (max-width: 991px) {
+  .certificates .image {
+    height: auto;
+    width: 90%;
+  }
+}
+
+.certificates .image:before,
+.certificates .image:after {
+  content: "";
+  position: absolute;
+  background-color: var(--main-color);
+  width: 100px;
+  height: calc(100% + 40px);
+  border-radius: var(--main-border-radius);
+  top: -20px;
+  z-index: -1;
+}
+
+.certificates .image:before {
+  left: -20px;
+}
+
+.certificates .image:after {
+  right: -20px;
+}
+
+@media (max-width: 767px) {
+  .certificates .image:before,
+  .certificates .image:after {
+    width: 50px;
+    height: calc(100% + 20px);
+    top: -10px;
+  }
+
+  .certificates .image:before {
+    left: -10px;
+  }
+
+  .certificates .image:after {
+    right: -10px;
+  }
+}
+
+.certificates .image img {
+  border-radius: var(--main-border-radius);
+  height: 100%;
+  width: 100%;
+}
+
+/* ______________________________________ End Certificates Section ______________________________________ */
+
 /* ______________________________________ Start Animation ______________________________________ */
 @keyframes up-and-down {
   0% {
