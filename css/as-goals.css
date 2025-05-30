@@ -598,7 +598,7 @@ header .meag-menu .other-links li a i {
 }
 
 .galary .box:hover .image img {
-  transform: rotate(5deg) scale(1.25);
+  transform: rotate(5deg) scale(1.15);
 }
 
 /* ______________________________________ End Galary ______________________________________ */
@@ -1658,7 +1658,7 @@ header .meag-menu .other-links li a i {
 }
 
 .achievements .compition .seasons-of-winning li:before {
-  font-weight: 900; 
+  font-weight: 900;
   font-family: "Font Awesome 5 Free";
   content: "\f00c";
   color: var(--main-color);
