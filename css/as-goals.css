@@ -1759,6 +1759,239 @@ header .meag-menu .other-links li a i {
 
 /* ______________________________________ End Certificates Section ______________________________________ */
 
+/* ______________________________________ Start Quizlet-Contributions Section ______________________________________ */
+
+.quizlet-contributions {
+  padding: var(--section-padding) 0 0;
+  background-color: var(--secondary-background-color);
+}
+
+/* ---------------- start stats section ---------------- */
+
+.quizlet-contributions .stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--main-grid-gap);
+  margin-bottom: 100px;
+}
+
+.quizlet-contributions .stats .box {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+  align-items: center;
+  padding: 30px;
+  background-color: var(--main-background-color);
+  position: relative;
+  opacity: 0.8;
+  transition-duration: var(--main-transition-duration);
+}
+
+.quizlet-contributions .stats .box:hover {
+  opacity: unset;
+}
+
+.quizlet-contributions .stats .box:before,
+.quizlet-contributions .stats .box:after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 0;
+  background-color: var(--main-color);
+  transition-duration: var(--main-transition-duration);
+}
+
+.quizlet-contributions .stats .box:hover:before,
+.quizlet-contributions .stats .box:hover:after {
+  height: 100%;
+}
+
+.quizlet-contributions .stats .box:before {
+  left: 0;
+  bottom: 0;
+}
+
+.quizlet-contributions .stats .box:after {
+  right: 0;
+  top: 0;
+}
+
+.quizlet-contributions .stats .box i {
+  font-size: 30px;
+}
+
+.quizlet-contributions .stats .box .number {
+  margin: 10px 0;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.quizlet-contributions .stats .box .title {
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  color: var(--main-color);
+}
+
+/* ---------------- end stats section ---------------- */
+
+/* ---------------- start holder section ---------------- */
+.quizlet-contributions .holder {
+  display: flex;
+}
+
+@media (max-width: 991px) {
+  .quizlet-contributions .holder {
+    flex-direction: column;
+  }
+}
+
+.quizlet-contributions .holder > div {
+  padding: 100px 50px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 991px) {
+  .quizlet-contributions .holder > div {
+    width: 100%;
+  }
+}
+
+.quizlet-contributions .holder > div > h3 {
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+/* left section */
+.quizlet-contributions .holder .left-section {
+  color: white;
+  background-image: url(../images/discount-background1.jpg);
+  text-align: center;
+  position: relative;
+  z-index: 0;
+}
+
+.quizlet-contributions .holder .left-section:after {
+  content: "";
+  position: absolute;
+  background-color: rgb(23 135 224 / 97%);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;  
+}
+
+.quizlet-contributions .holder .right-section {
+  background-color: white;
+}
+
+.quizlet-contributions .holder .left-section p {
+  line-height: var(--paragraph-line-height);
+  font-size: 1.1rem;
+}
+
+.quizlet-contributions .holder .left-section a {
+  width: 80%;
+}
+
+.quizlet-contributions .holder .left-section img {
+  max-width: 100%;
+  margin-bottom: -100px;
+}
+
+/* right section */
+.quizlet-contributions .right-section .quizlet-classes {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.quizlet-contributions .right-section > h3:after {
+  content: "";
+  position: absolute;
+  background-color: var(--main-color);
+  width: calc(100% + 20px);
+  height: 5px;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.quizlet-contributions .right-section .quizlet-class {
+  border: 3px solid var(--secondary-background-color);
+  width: 100%;
+  position: relative;
+  background-color: var(--secondary-background-color);
+  border-radius: var(--main-border-radius);
+  padding: 10px;
+  z-index: 0;
+}
+
+.quizlet-contributions .right-section .quizlet-class:after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  height: 0;
+  width: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition-duration: var(--main-transition-duration);
+  z-index: -1;
+}
+
+.quizlet-contributions .right-section .quizlet-class:hover:after {
+  height: 100%;
+  width: 100%;
+}
+
+.quizlet-contributions .right-section .quizlet-class h4 {
+  text-transform: uppercase;
+  color: var(--main-color);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.quizlet-contributions .right-section .quizlet-class p {
+  color: var(--text-color);
+  margin-bottom: 35px;
+  font-size: 0.8rem;
+  line-height: var(--secondary-line-height);
+}
+
+.quizlet-contributions .right-section .quizlet-class a {
+  text-transform: capitalize;
+  position: absolute;
+  font-size: 0.7rem;
+  padding: 5px 10px;
+  color: var(--main-color);
+  background-color: white;
+  border-radius: var(--secondary-border-radius);
+  right: 10px;
+  bottom: 10px;
+  transition-duration: var(--main-transition-duration);
+}
+
+.quizlet-contributions .right-section .quizlet-class:hover a {
+  color: white;
+  background-color: var(--main-color);
+}
+
+/* ---------------- end holder section ---------------- */
+
+/* ______________________________________ End Quizlet-Contributions Section ______________________________________ */
+
 /* ______________________________________ Start Animation ______________________________________ */
 @keyframes up-and-down {
   0% {
