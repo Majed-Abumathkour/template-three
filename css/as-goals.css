@@ -603,32 +603,32 @@ header .meag-menu .other-links li a i {
 
 /* ______________________________________ End Galary ______________________________________ */
 
-/* ______________________________________ Start Features ______________________________________ */
+/* ______________________________________ Start languages ______________________________________ */
 
-.features {
+.languages {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
   background-color: white;
 }
 
-.features .container {
+.languages .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: var(--main-grid-gap);
 }
 
-.features .feature {
+.languages .language {
   border: 1px solid var(--border-color);
   text-align: center;
   box-shadow: var(--main-box-shadow);
 }
 
-.features .feature .img-holder {
+.languages .language .img-holder {
   position: relative;
   overflow: hidden;
 }
 
-.features .feature .img-holder::before {
+.languages .language .img-holder::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -640,12 +640,12 @@ header .meag-menu .other-links li a i {
   z-index: 3;
 }
 
-.features .feature:hover .img-holder::before {
+.languages .language:hover .img-holder::before {
   left: 0;
   border-width: 0px 700px 100px 0px;
 }
 
-.features .feature .img-holder::after {
+.languages .language .img-holder::after {
   content: "";
   width: 100%;
   height: 100%;
@@ -656,27 +656,27 @@ header .meag-menu .other-links li a i {
   transition-duration: calc(var(--main-transition-duration) / 2);
 }
 
-.features .feature:hover .img-holder::after {
+.languages .language:hover .img-holder::after {
   opacity: 0.3;
 }
 
-.features .quality .img-holder::after {
+.languages .english .img-holder::after {
   background-color: orangered;
 }
 
-.features .time .img-holder::after {
+.languages .arabic .img-holder::after {
   background-color: green;
 }
 
-.features .passion .img-holder::after {
+.languages .german .img-holder::after {
   background-color: var(--main-color);
 }
 
-.features .feature .img-holder img {
+.languages .language .img-holder img {
   max-width: 100%;
 }
 
-.features .feature h2 {
+.languages .language h2 {
   text-transform: capitalize;
   width: fit-content;
   margin: 0 auto 40px;
@@ -685,7 +685,7 @@ header .meag-menu .other-links li a i {
   position: relative;
 }
 
-.features .feature h2:after {
+.languages .language h2:after {
   content: "";
   position: absolute;
   height: 5px;
@@ -696,23 +696,23 @@ header .meag-menu .other-links li a i {
   transition-duration: calc(var(--main-transition-duration) / 2);
 }
 
-.features .feature:hover h2:after {
+.languages .language:hover h2:after {
   width: 120%;
 }
 
-.features .quality h2:after {
+.languages .english h2:after {
   background-color: orangered;
 }
 
-.features .time h2:after {
+.languages .arabic h2:after {
   background-color: green;
 }
 
-.features .passion h2:after {
+.languages .german h2:after {
   background-color: var(--main-color);
 }
 
-.features .feature p {
+.languages .language p {
   padding: 0 30px;
   margin-bottom: 30px;
   color: var(--text-color);
@@ -720,7 +720,7 @@ header .meag-menu .other-links li a i {
   line-height: var(--paragraph-line-height);
 }
 
-.features .feature a {
+.languages .language a {
   text-transform: capitalize;
   font-weight: bold;
   font-size: 22px;
@@ -737,11 +737,11 @@ header .meag-menu .other-links li a i {
   transition-duration: calc(var(--main-transition-duration) / 2);
 }
 
-.features .feature:hover a {
+.languages .language:hover a {
   color: white;
 }
 
-.features .feature a::after {
+.languages .language a::after {
   content: "";
   position: absolute;
   top: 0;
@@ -752,38 +752,38 @@ header .meag-menu .other-links li a i {
   transition-duration: calc(var(--main-transition-duration) / 2);
 }
 
-.features .feature:hover a::after {
+.languages .language:hover a::after {
   width: 100%;
 }
 
-.features .quality a::after {
+.languages .english a::after {
   background-color: orangered;
 }
 
-.features .time a::after {
+.languages .arabic a::after {
   background-color: green;
 }
 
-.features .passion a::after {
+.languages .german a::after {
   background-color: var(--main-color);
 }
 
-.features .quality a {
+.languages .english a {
   color: orangered;
   border-color: orangered;
 }
 
-.features .time a {
+.languages .arabic a {
   color: green;
   border-color: green;
 }
 
-.features .passion a {
+.languages .german a {
   color: var(--main-color);
   border-color: var(--main-color);
 }
 
-/* ______________________________________ End Features ______________________________________ */
+/* ______________________________________ End languages ______________________________________ */
 
 /* ______________________________________ Start Testimonials ______________________________________ */
 
@@ -1037,34 +1037,34 @@ header .meag-menu .other-links li a i {
 
 /* ______________________________________ End Favorite Games ______________________________________ */
 
-/* ______________________________________ Start Services Section ______________________________________ */
+/* ______________________________________ Start soft-skills Section ______________________________________ */
 
-.services {
+.soft-skills {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
-  background-color: var(--secondary-background-color);
+  background-color: var(--main-background-color);
 }
 
-.services .container {
+.soft-skills .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: var(--main-grid-gap);
 }
 
-.services .service {
+.soft-skills .skill {
   position: relative;
   background-color: white;
   box-shadow: var(--main-box-shadow);
   text-align: center;
   transition-duration: var(--main-transition-duration);
-  counter-increment: services;
+  counter-increment: soft-skills;
 }
 
-.services .service:hover {
+.soft-skills .skill:hover {
   transform: translateY(-10px);
 }
 
-.services .service::before {
+.soft-skills .skill::before {
   content: "";
   position: absolute;
   background-color: var(--main-color);
@@ -1075,25 +1075,25 @@ header .meag-menu .other-links li a i {
   transition-duration: var(--main-transition-duration);
 }
 
-.services .service:hover::before {
+.soft-skills .skill:hover::before {
   width: 100%;
   left: 0;
 }
 
-.services .service i {
+.soft-skills .skill i {
   display: block;
   margin: 30px 0 20px;
   color: #d5d5d5;
 }
 
-.services .service h3 {
+.soft-skills .skill h3 {
   text-transform: capitalize;
   font-size: 1.5rem;
   color: var(--main-color);
   margin-bottom: 30px;
 }
 
-.services .service .info {
+.soft-skills .skill .info {
   position: relative;
   padding: 15px;
   background-color: #f9f9f9;
@@ -1102,8 +1102,8 @@ header .meag-menu .other-links li a i {
   overflow: hidden;
 }
 
-.services .service .info:before {
-  content: "0" counter(services);
+.soft-skills .skill .info:before {
+  content: "0" counter(soft-skills);
   position: absolute;
   background-color: var(--main-color);
   color: white;
@@ -1120,7 +1120,7 @@ header .meag-menu .other-links li a i {
   z-index: -2;
 }
 
-.services .service .info:after {
+.soft-skills .skill .info:after {
   content: "";
   position: absolute;
   width: 40px;
@@ -1132,64 +1132,65 @@ header .meag-menu .other-links li a i {
   z-index: -1;
 }
 
-.services .service .info a {
+.soft-skills .skill .info a {
   color: var(--main-color);
 }
 
-/* ______________________________________ End Services Section ______________________________________ */
+/* ______________________________________ End soft-skills Section ______________________________________ */
 
-/* ______________________________________ Start My-Skills Section ______________________________________ */
+/* ______________________________________ Start technical-skills Section ______________________________________ */
 
-.my-skills {
+.technical-skills {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
+  background-color: var(--secondary-background-color);
 }
 
-.my-skills .container {
+.technical-skills .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.my-skills img {
+.technical-skills img {
   padding-top: 40px;
   animation: up-and-down var(--main-animation-duration) linear infinite
     alternate;
 }
 
 @media (max-width: 991px) {
-  .my-skills img {
+  .technical-skills img {
     width: 400px;
   }
 }
 
 @media (max-width: 767px) {
-  .my-skills img {
+  .technical-skills img {
     display: none;
   }
 }
 
-.my-skills .skills {
+.technical-skills .skills {
   flex: 1;
 }
 
-.my-skills .skills .skill {
+.technical-skills .skills .skill {
   display: flex;
   flex-direction: column;
 }
 
-.my-skills .skills .skill:not(:last-of-type) {
+.technical-skills .skills .skill:not(:last-of-type) {
   margin-bottom: 10px;
 }
 
-.my-skills .skills .skill .skill-info {
+.technical-skills .skills .skill .skill-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
 }
 
-.my-skills .skills .skill .skill-info h3 {
+.technical-skills .skills .skill .skill-info h3 {
   padding-left: 10px;
   text-transform: uppercase;
   display: flex;
@@ -1198,16 +1199,16 @@ header .meag-menu .other-links li a i {
   transition-duration: var(--main-transition-duration);
 }
 
-.my-skills .skills .skill:hover .skill-info h3 {
+.technical-skills .skills .skill:hover .skill-info h3 {
   color: var(--main-color);
 }
 
-.my-skills .skills .skill .skill-info h3 i {
+.technical-skills .skills .skill .skill-info h3 i {
   margin-right: 10px;
   font-size: 2rem;
 }
 
-.my-skills .skills .skill .skill-info span {
+.technical-skills .skills .skill .skill-info span {
   display: block;
   font-weight: bold;
   margin-right: 10px;
@@ -1219,26 +1220,26 @@ header .meag-menu .other-links li a i {
   transition-duration: var(--main-transition-duration);
 }
 
-.my-skills .skills .skill:hover .skill-info span {
+.technical-skills .skills .skill:hover .skill-info span {
   color: white;
   background-color: var(--main-color);
 }
 
-.my-skills .skills .skill .progress {
+.technical-skills .skills .skill .progress {
   flex-grow: 1;
   background-color: var(--secondary-background-color);
   height: 30px;
   position: relative;
 }
 
-.my-skills .skills .skill .progress span {
+.technical-skills .skills .skill .progress span {
   height: 100%;
   position: absolute;
   left: 0;
   top: 0;
 }
 
-/* ______________________________________ End My-Skills Section ______________________________________ */
+/* ______________________________________ End technical-skills Section ______________________________________ */
 
 /* ______________________________________ Start My-Works Section ______________________________________ */
 
@@ -1971,7 +1972,7 @@ header .meag-menu .other-links li a i {
 }
 
 .quizlet-contributions .right-section .quizlet-class a {
-  text-transform: capitalize;
+  text-transform: capitalize;                                                               
   position: absolute;
   font-size: 0.7rem;
   padding: 5px 10px;
