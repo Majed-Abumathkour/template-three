@@ -162,6 +162,25 @@ input[type="submit"] {
 
 /* #endregion >>> Main-Title ************************ */
 
+/* #region >>> Spikes ************************ */
+
+.spikes {
+  position: relative;
+}
+
+.spikes::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 30px;
+  background-image: linear-gradient(135deg, var(--main-background-color) 25%, transparent 25%),
+  linear-gradient(225deg, var(--main-background-color) 25%, transparent 25%);
+  background-size: 30px 30px;
+}
+
+/* #endregion >>> Spikes ************************ */
+
 /* #endregion >> Components ------------------------------------ */
 
 /* #region >> Header ------------------------------------ */
@@ -2033,7 +2052,6 @@ header .meag-menu .other-links li a i {
 
 footer {
   background-color: #191919;
-  overflow: hidden;
   color: #b9b9b9;
 }
 
@@ -2170,6 +2188,7 @@ footer .contact-info .line i {
 
 footer .contact-info .line .info {
   line-height: var(--secondary-line-height);
+  flex: 1;
 }
 
 footer .contact-info .line .info span {
@@ -2191,9 +2210,9 @@ footer .contact-info .line .info a:hover {
 
 footer .footer-galary {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   align-items: center;
-  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   height: fit-content;
 }
@@ -2202,6 +2221,10 @@ footer .footer-galary img {
   max-width: 100%;
   border: 3px solid white;
 }
+
+/* #endregion >>> Footer-Galary ************************ */
+
+/* #region >>> Copyright ************************ */
 
 footer p.copyright {
   border-top: 1px solid #9b9b9b;
@@ -2216,7 +2239,8 @@ footer p.copyright span {
   color: var(--main-color);
 }
 
-/* #endregion >>> Footer-Galary ************************ */
+
+/* #endregion >>> Copyright ************************ */
 
 /* #endregion >> Footer ------------------------------------ */
 
