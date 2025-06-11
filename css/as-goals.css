@@ -1,6 +1,4 @@
-/* ______________________________________ Start Variables ______________________________________ */
-
-/* fonts */
+/* #region >> Variables ------------------------------------ */
 @font-face {
   font-family: cairo;
   src: url(../fonts/Cairo-VariableFont_slnt\wght.ttf);
@@ -37,10 +35,9 @@
   /* gaps */
   --main-grid-gap: 40px;
 }
+/* #endregion >> Variables ------------------------------------ */
 
-/* ______________________________________ End Variables ______________________________________ */
-
-/* ______________________________________ Start Global Rules ______________________________________ */
+/* #region >> Global Rules ------------------------------------ */
 
 * {
   -webkit-box-sizing: border-box;
@@ -72,8 +69,8 @@ a {
 input[type="submit"] {
   cursor: pointer;
 }
+/* #region >>> Container ************************ */
 
-/* -------------------- Start Contaier -------------------- */
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -82,36 +79,30 @@ input[type="submit"] {
   margin-left: auto;
 }
 
-/* These medias are bootstrap 3 code */
-/* Small Screens */
 @media (min-width: 768px) {
   .container {
     width: 750px;
-    /* If this value is > 768px we will scroll, and this is wrong */
   }
 }
 
-/* Medium Screens */
 @media (min-width: 992px) {
   .container {
     width: 970px;
-    /* If this value is > 992px we will scroll, and this is wrong */
   }
 }
 
-/* Large Screens */
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
-    /* If this value is > 1200px we will scroll, and this is wrong */
   }
 }
+/* #endregion >>> Container ************************ */
 
-/* ______________________________________ End Global Rules ______________________________________ */
+/* #endregion ------------------------------------ */
 
-/* ______________________________________ Start Components ______________________________________ */
+/* #region >> Components ------------------------------------ */
 
-/* -------------------- Start Main Title -------------------- */
+/* #region >>> Main-Title ************************ */
 .main-title {
   width: fit-content;
   border: 2px solid black;
@@ -169,9 +160,11 @@ input[type="submit"] {
   right: 0;
 }
 
-/* ______________________________________ End Components ______________________________________ */
+/* #endregion >>> Main-Title ************************ */
 
-/* ______________________________________ Start Header ______________________________________ */
+/* #endregion >> Components ------------------------------------ */
+
+/* #region >> Header ------------------------------------ */
 
 header {
   position: relative;
@@ -189,7 +182,8 @@ header .container {
   position: relative;
 }
 
-/* ------------------ Logo ------------------ */
+/* #region >>> Logo ************************ */
+
 header .logo {
   color: var(--main-color);
   font-weight: bold;
@@ -212,7 +206,10 @@ header .logo:hover {
   }
 }
 
-/* ------------------ Main Nav ------------------ */
+/* #endregion >>> Logo ************************ */
+
+/* #region >>> Main-Nav ************************ */
+
 header .main-nav {
   display: flex;
   justify-content: center;
@@ -265,7 +262,10 @@ header .main-nav > li > a:hover::before {
   width: 100%;
 }
 
-/* ------------------ Mega Menu ------------------ */
+/* #endregion >>> Main-Nav ************************ */
+
+/* #region >>> Mega-Menu ************************ */
+
 header .meag-menu {
   display: grid;
   align-items: center;
@@ -360,9 +360,11 @@ header .meag-menu .other-links li a i {
   margin-right: 10px;
 }
 
-/* ______________________________________ End Header ______________________________________ */
+/* #endregion >>> Mega-Menu ************************ */
 
-/* ______________________________________ Start Landing ______________________________________ */
+/* #endregion >> Header ------------------------------------ */
+
+/* #region >> Landing ------------------------------------ */
 
 .landing {
   position: relative;
@@ -389,7 +391,8 @@ header .meag-menu .other-links li a i {
   z-index: 1;
 }
 
-/* ------------------ Text ------------------ */
+/* #region >> Text ************************ */
+
 .landing .text {
   flex: 1;
   max-width: 500px;
@@ -426,7 +429,10 @@ header .meag-menu .other-links li a i {
   }
 }
 
-/* ------------------ Image ------------------ */
+/* #endregion >> Text ************************ */
+
+/* #region >> Image ************************ */
+
 .landing .image img {
   width: 600px;
   max-width: 100%;
@@ -444,11 +450,13 @@ header .meag-menu .other-links li a i {
   }
 }
 
-/* ------------------ Arrow ------------------ */
+/* #endregion >> Image ************************ */
+
+/* #region >> Arrow ************************ */
+
 .landing .go-down {
   color: var(--main-color);
   position: absolute;
-  /* bottom: 30px; */
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
@@ -467,9 +475,11 @@ header .meag-menu .other-links li a i {
   font-size: 1.5rem;
 }
 
-/* ______________________________________ End Landing ______________________________________ */
+/* #endregion >> Arrow ************************ */
 
-/* ______________________________________ Start Articles ______________________________________ */
+/* #endregion >> Landing ------------------------------------ */
+
+/* #region >> Articles  ------------------------------------ */
 
 .articles {
   padding-top: var(--section-padding);
@@ -548,67 +558,14 @@ header .meag-menu .other-links li a i {
   animation-timing-function: linear;
 }
 
-/* ______________________________________ End Articles ______________________________________ */
+/* #endregion >> Articles  ------------------------------------ */
 
-/* ______________________________________ Start Galary ______________________________________ */
-
-.galary {
-  background-color: var(--secondary-background-color);
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
-}
-
-.galary .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: var(--main-grid-gap);
-}
-
-.galary .box {
-  background-color: white;
-  padding: 15px;
-  box-shadow: var(--main-box-shadow);
-}
-
-.galary .box .image {
-  overflow: hidden;
-  position: relative;
-}
-
-.galary .box .image:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 0;
-  height: 0;
-  background-color: rgba(255 255 255 / 20%);
-  z-index: 1;
-  opacity: 0;
-}
-
-.galary .box:hover .image:after {
-  animation: flashing calc(var(--main-animation-duration) / 2);
-}
-
-.galary .box img {
-  max-width: 100%;
-  transition-duration: var(--main-transition-duration);
-}
-
-.galary .box:hover .image img {
-  transform: rotate(5deg) scale(1.15);
-}
-
-/* ______________________________________ End Galary ______________________________________ */
-
-/* ______________________________________ Start languages ______________________________________ */
+/* #region >> Languages ------------------------------------ */
 
 .languages {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
-  background-color: white;
+  background-color: var(--secondary-background-color);
 }
 
 .languages .container {
@@ -618,6 +575,7 @@ header .meag-menu .other-links li a i {
 }
 
 .languages .language {
+  background-color: var(--main-background-color);
   border: 1px solid var(--border-color);
   text-align: center;
   box-shadow: var(--main-box-shadow);
@@ -633,7 +591,7 @@ header .meag-menu .other-links li a i {
   position: absolute;
   bottom: 0;
   right: 0;
-  border-color: transparent transparent white transparent;
+  border-color: transparent transparent var(--main-background-color) transparent;
   border-style: solid;
   border-width: 0px 0px 150px 700px;
   transition-duration: calc(var(--main-transition-duration) / 2);
@@ -783,120 +741,696 @@ header .meag-menu .other-links li a i {
   border-color: var(--main-color);
 }
 
-/* ______________________________________ End languages ______________________________________ */
+/* #endregion >> Languages ------------------------------------ */
 
-/* ______________________________________ Start Testimonials ______________________________________ */
+/* #region >> Technical-Skills ------------------------------------ */
 
-.testimonials {
+.technical-skills {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--main-background-color);
+}
+
+.technical-skills .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* #region >>> The Image ************************ */
+
+.technical-skills img {
+  padding-top: 40px;
+  animation: up-and-down var(--main-animation-duration) linear infinite
+    alternate;
+}
+
+@media (max-width: 991px) {
+  .technical-skills img {
+    width: 400px;
+  }
+}
+
+@media (max-width: 767px) {
+  .technical-skills img {
+    display: none;
+  }
+}
+
+
+/* #endregion >>> The Image ************************ */
+
+/* #region >>> Skills ************************ */
+
+.technical-skills .skills {
+  flex: 1;
+}
+
+.technical-skills .skills .skill {
+  display: flex;
+  flex-direction: column;
+}
+
+.technical-skills .skills .skill:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+.technical-skills .skills .skill .skill-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.technical-skills .skills .skill .skill-info h3 {
+  padding-left: 10px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: var(--main-transition-duration);
+}
+
+.technical-skills .skills .skill:hover .skill-info h3 {
+  color: var(--main-color);
+}
+
+.technical-skills .skills .skill .skill-info h3 i {
+  margin-right: 10px;
+  font-size: 2rem;
+}
+
+.technical-skills .skills .skill .skill-info span {
+  display: block;
+  font-weight: bold;
+  margin-right: 10px;
+  padding: 3px 5px;
+  border: 1px solid #ccc;
+  border-radius: var(--secondary-border-radius);
+  font-size: 0.8rem;
+  color: var(--main-color);
+  transition-duration: var(--main-transition-duration);
+}
+
+.technical-skills .skills .skill:hover .skill-info span {
+  color: white;
+  background-color: var(--main-color);
+}
+
+.technical-skills .skills .skill .progress {
+  flex-grow: 1;
+  background-color: var(--secondary-background-color);
+  height: 30px;
+  position: relative;
+}
+
+.technical-skills .skills .skill .progress span {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* #endregion >>> Skills ************************ */
+
+/* #endregion >> Technical-Skills ------------------------------------ */
+
+/* #region >> Soft-Skills ------------------------------------ */
+
+.soft-skills {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
   background-color: var(--secondary-background-color);
 }
 
-.testimonials .container {
+.soft-skills .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: var(--main-grid-gap);
 }
 
-.testimonials .testimonial {
-  background-color: white;
-  padding: 20px;
-  border-radius: var(--main-border-radius);
+.soft-skills .skill {
   position: relative;
+  background-color: white;
   box-shadow: var(--main-box-shadow);
+  text-align: center;
   transition-duration: var(--main-transition-duration);
-  z-index: 0;
+  counter-increment: soft-skills;
 }
 
-.testimonials .testimonial:hover {
-  color: white;
+.soft-skills .skill:hover {
+  transform: translateY(-10px);
 }
 
-.testimonials .testimonial:after {
+.soft-skills .skill::before {
   content: "";
   position: absolute;
   background-color: var(--main-color);
-  border-radius: inherit;
-  right: 0;
+  height: 3px;
+  width: 0;
+  bottom: 100%;
+  left: 50%;
+  transition-duration: var(--main-transition-duration);
+}
+
+.soft-skills .skill:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.soft-skills .skill i {
+  display: block;
+  margin: 30px 0 20px;
+  color: #d5d5d5;
+}
+
+.soft-skills .skill h3 {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  color: var(--main-color);
+  margin-bottom: 30px;
+}
+
+.soft-skills .skill .info {
+  position: relative;
+  padding: 15px;
+  background-color: #f9f9f9;
+  text-align: right;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.soft-skills .skill .info:before {
+  content: "0" counter(soft-skills);
+  position: absolute;
+  background-color: var(--main-color);
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding-right: 15px;
+  left: 0;
   top: 0;
   height: 100%;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -2;
+}
+
+.soft-skills .skill .info:after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 100%;
+  background-color: #d5d5d5;
+  left: 80px;
+  bottom: 0;
+  transform: skewX(-30deg);
+  z-index: -1;
+}
+
+.soft-skills .skill .info a {
+  color: var(--main-color);
+}
+
+/* #endregion >> Soft-Skills ------------------------------------ */
+
+/* #region >> My-Works ------------------------------------ */
+
+.my-works {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--main-background-color);
+}
+
+.my-works .container {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+/* #region >>> Main-Image ************************ */
+
+.my-works .main-image {
+  animation: up-and-down var(--main-animation-duration) linear infinite
+    alternate;
+}
+
+@media (max-width: 991px) {
+  .my-works .main-image {
+    display: none;
+  }
+}
+
+/* #endregion >>> Main-Image ************************ */
+
+/* #region >>> Works ************************ */
+
+.my-works .works {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.my-works .works .work {
+  border-radius: var(--main-border-radius);
+  border: 3px solid white;
+  background-color: #f5f5f5;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.my-works .works .work:after {
+  content: "";
+  position: absolute;
+  background-color: var(--secondary-background-color);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 0;
+  height: 0;
   transition-duration: var(--main-transition-duration);
   z-index: -1;
 }
 
-.testimonials .testimonial:hover:after {
+.my-works .works .work:hover:after {
   width: 100%;
+  height: 100%;
 }
 
-.testimonials .testimonial img {
-  object-fit: cover;
-  background-color: var(--secondary-background-color);
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translateY(-50%);
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  outline: 10px solid var(--secondary-background-color);
-  transition-duration: var(--main-transition-duration);
+.my-works .works .work img {
+  width: 65px;
 }
 
-.testimonials .testimonial:hover img {
-  top: 25px;
-}
-
-.testimonials .testimonial h3 {
+.my-works .works .work .text h3 {
+  font-size: 1.2rem;
   color: var(--main-color);
   text-transform: capitalize;
   margin-bottom: 10px;
-  transition-duration: var(--main-transition-duration);
 }
 
-.testimonials .testimonial:hover h3 {
-  color: white;
-}
-
-.testimonials .testimonial span {
-  text-transform: capitalize;
+.my-works .works .work .text p {
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
   color: var(--text-color);
-  display: block;
-  margin-bottom: 10px;
-  transition-duration: var(--main-transition-duration);
-}
-
-.testimonials .testimonial:hover span {
-  color: white;
-}
-
-.testimonials .testimonial .rate {
-  margin-bottom: 10px;
-}
-
-.testimonials .testimonial .rate .filled {
-  color: #ffc107;
-}
-
-.testimonials .testimonial p {
-  color: var(--text-color);
-  font-size: 0.9rem;
   line-height: var(--secondary-line-height);
+}
+
+.my-works .works .work .text p a {
+  font-size: 0.7rem;
+  margin-top: 5px;
+  align-self: flex-end;
+  color: white;
+  background-color: var(--main-color);
+  padding: 5px 10px;
+  border-radius: var(--main-border-radius);
   transition-duration: var(--main-transition-duration);
 }
 
-.testimonials .testimonial:hover p {
-  color: white;
+.my-works .works .work:hover .text p a {
+  color: var(--main-color);
+  background-color: #f5f5f5;
 }
 
-/* ______________________________________ End Testimonials ______________________________________ */
+/* #endregion >>> Works ************************ */
 
-/* ______________________________________ Start Favorite Games ______________________________________ */
+/* #endregion >> My-Works ------------------------------------ */
+
+/* #region >> Certificates ------------------------------------ */
+
+.certificates {
+  padding: var(--section-padding) 0px;
+  background-color: var(--secondary-background-color);
+}
+
+.certificates .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.certificates .image {
+  height: 500px;
+  display: flex;
+  border-radius: var(--main-border-radius);
+  position: relative;
+  z-index: 0;
+}
+
+@media (max-width: 991px) {
+  .certificates .image {
+    height: auto;
+    width: 90%;
+  }
+}
+
+.certificates .image:before,
+.certificates .image:after {
+  content: "";
+  position: absolute;
+  background-color: var(--main-color);
+  width: 100px;
+  height: calc(100% + 40px);
+  border-radius: var(--main-border-radius);
+  top: -20px;
+  z-index: -1;
+}
+
+.certificates .image:before {
+  left: -20px;
+}
+
+.certificates .image:after {
+  right: -20px;
+}
+
+@media (max-width: 767px) {
+  .certificates .image:before,
+  .certificates .image:after {
+    width: 50px;
+    height: calc(100% + 20px);
+    top: -10px;
+  }
+
+  .certificates .image:before {
+    left: -10px;
+  }
+
+  .certificates .image:after {
+    right: -10px;
+  }
+}
+
+.certificates .image img {
+  border-radius: var(--main-border-radius);
+  height: 100%;
+  width: 100%;
+}
+
+/* #endregion >> Certificates ------------------------------------ */
+
+/* #region >> Quizlet-Contributions ------------------------------------ */
+
+.quizlet-contributions {
+  padding: var(--section-padding) 0 0;
+  background-color: var(--main-background-color);
+}
+
+/* #region >>> Stats ************************ */
+
+.quizlet-contributions .stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--main-grid-gap);
+  margin-bottom: 100px;
+}
+
+.quizlet-contributions .stats .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  background-color: var(--secondary-background-color);
+  position: relative;
+  opacity: 0.8;
+  transition-duration: var(--main-transition-duration);
+}
+
+.quizlet-contributions .stats .box:hover {
+  opacity: unset;
+}
+
+.quizlet-contributions .stats .box:before,
+.quizlet-contributions .stats .box:after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 0;
+  background-color: var(--main-color);
+  transition-duration: var(--main-transition-duration);
+}
+
+.quizlet-contributions .stats .box:hover:before,
+.quizlet-contributions .stats .box:hover:after {
+  height: 100%;
+}
+
+.quizlet-contributions .stats .box:before {
+  left: 0;
+  bottom: 0;
+}
+
+.quizlet-contributions .stats .box:after {
+  right: 0;
+  top: 0;
+}
+
+.quizlet-contributions .stats .box i {
+  font-size: 30px;
+}
+
+.quizlet-contributions .stats .box .number {
+  margin: 10px 0;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.quizlet-contributions .stats .box .title {
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  color: var(--main-color);
+}
+
+/* #endregion >>> Stats ************************ */
+
+.quizlet-contributions .holder {
+  display: flex;
+}
+
+@media (max-width: 991px) {
+  .quizlet-contributions .holder {
+    flex-direction: column;
+  }
+}
+
+.quizlet-contributions .holder > div {
+  padding: 100px 50px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 991px) {
+  .quizlet-contributions .holder > div {
+    width: 100%;
+  }
+}
+
+.quizlet-contributions .holder > div > h3 {
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+/* #region >>> Left-Section ************************ */
+
+.quizlet-contributions .holder .left-section {
+  color: white;
+  background-image: url(../images/discount-background1.jpg);
+  text-align: center;
+  position: relative;
+  z-index: 0;
+}
+
+.quizlet-contributions .holder .left-section:after {
+  content: "";
+  position: absolute;
+  background-color: rgb(23 135 224 / 97%);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.quizlet-contributions .holder .left-section p {
+  line-height: var(--paragraph-line-height);
+  font-size: 1.1rem;
+}
+
+.quizlet-contributions .holder .left-section a {
+  width: 80%;
+}
+
+.quizlet-contributions .holder .left-section img {
+  max-width: 100%;
+  margin-bottom: -100px;
+}
+
+/* #endregion >>> Left-Section ************************ */
+
+/* #region >>> Right-Section ************************ */
+
+.quizlet-contributions .holder .right-section {
+  background-color: white;
+}
+
+.quizlet-contributions .right-section .quizlet-classes {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.quizlet-contributions .right-section > h3:after {
+  content: "";
+  position: absolute;
+  background-color: var(--main-color);
+  width: calc(100% + 20px);
+  height: 5px;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.quizlet-contributions .right-section .quizlet-class {
+  border: 3px solid var(--secondary-background-color);
+  width: 100%;
+  position: relative;
+  background-color: var(--secondary-background-color);
+  border-radius: var(--main-border-radius);
+  padding: 10px;
+  z-index: 0;
+}
+
+.quizlet-contributions .right-section .quizlet-class:after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  height: 0;
+  width: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition-duration: var(--main-transition-duration);
+  z-index: -1;
+}
+
+.quizlet-contributions .right-section .quizlet-class:hover:after {
+  height: 100%;
+  width: 100%;
+}
+
+.quizlet-contributions .right-section .quizlet-class h4 {
+  text-transform: uppercase;
+  color: var(--main-color);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.quizlet-contributions .right-section .quizlet-class p {
+  color: var(--text-color);
+  margin-bottom: 35px;
+  font-size: 0.8rem;
+  line-height: var(--secondary-line-height);
+}
+
+.quizlet-contributions .right-section .quizlet-class a {
+  text-transform: capitalize;
+  position: absolute;
+  font-size: 0.7rem;
+  padding: 5px 10px;
+  color: var(--main-color);
+  background-color: white;
+  border-radius: var(--secondary-border-radius);
+  right: 10px;
+  bottom: 10px;
+  transition-duration: var(--main-transition-duration);
+}
+
+.quizlet-contributions .right-section .quizlet-class:hover a {
+  color: white;
+  background-color: var(--main-color);
+}
+
+/* #endregion >>> Right-Section ************************ */
+
+/* #endregion >> Quizlet-Contributions ------------------------------------ */
+
+/* #region >> Galary ------------------------------------ */
+
+.galary {
+  background-color: var(--secondary-background-color);
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.galary .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--main-grid-gap);
+}
+
+.galary .box {
+  background-color: white;
+  padding: 15px;
+  box-shadow: var(--main-box-shadow);
+}
+
+.galary .box .image {
+  overflow: hidden;
+  position: relative;
+}
+
+.galary .box .image:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  background-color: rgba(255 255 255 / 20%);
+  z-index: 1;
+  opacity: 0;
+}
+
+.galary .box:hover .image:after {
+  animation: flashing calc(var(--main-animation-duration) / 2);
+}
+
+.galary .box img {
+  max-width: 100%;
+  transition-duration: var(--main-transition-duration);
+}
+
+.galary .box:hover .image img {
+  transform: rotate(5deg) scale(1.15);
+}
+
+/* #endregion >> Galary ------------------------------------ */
+
+/* #region >> Favorite-Games ------------------------------------ */
 
 .favorite-games {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
+  background-color: var(--main-background-color);
 }
 
 .favorite-games .container {
@@ -908,6 +1442,7 @@ header .meag-menu .other-links li a i {
 .favorite-games .box {
   padding-bottom: 10px;
   position: relative;
+  z-index: 0;
 }
 
 .favorite-games .box::after,
@@ -1035,317 +1570,14 @@ header .meag-menu .other-links li a i {
   color: white;
 }
 
-/* ______________________________________ End Favorite Games ______________________________________ */
+/* #endregion >> Favorite-Games ------------------------------------ */
 
-/* ______________________________________ Start soft-skills Section ______________________________________ */
-
-.soft-skills {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
-  background-color: var(--main-background-color);
-}
-
-.soft-skills .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: var(--main-grid-gap);
-}
-
-.soft-skills .skill {
-  position: relative;
-  background-color: white;
-  box-shadow: var(--main-box-shadow);
-  text-align: center;
-  transition-duration: var(--main-transition-duration);
-  counter-increment: soft-skills;
-}
-
-.soft-skills .skill:hover {
-  transform: translateY(-10px);
-}
-
-.soft-skills .skill::before {
-  content: "";
-  position: absolute;
-  background-color: var(--main-color);
-  height: 3px;
-  width: 0;
-  bottom: 100%;
-  left: 50%;
-  transition-duration: var(--main-transition-duration);
-}
-
-.soft-skills .skill:hover::before {
-  width: 100%;
-  left: 0;
-}
-
-.soft-skills .skill i {
-  display: block;
-  margin: 30px 0 20px;
-  color: #d5d5d5;
-}
-
-.soft-skills .skill h3 {
-  text-transform: capitalize;
-  font-size: 1.5rem;
-  color: var(--main-color);
-  margin-bottom: 30px;
-}
-
-.soft-skills .skill .info {
-  position: relative;
-  padding: 15px;
-  background-color: #f9f9f9;
-  text-align: right;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.soft-skills .skill .info:before {
-  content: "0" counter(soft-skills);
-  position: absolute;
-  background-color: var(--main-color);
-  color: white;
-  font-weight: bold;
-  font-size: 1.5rem;
-  padding-right: 15px;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: -2;
-}
-
-.soft-skills .skill .info:after {
-  content: "";
-  position: absolute;
-  width: 40px;
-  height: 100%;
-  background-color: #d5d5d5;
-  left: 80px;
-  bottom: 0;
-  transform: skewX(-30deg);
-  z-index: -1;
-}
-
-.soft-skills .skill .info a {
-  color: var(--main-color);
-}
-
-/* ______________________________________ End soft-skills Section ______________________________________ */
-
-/* ______________________________________ Start technical-skills Section ______________________________________ */
-
-.technical-skills {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
-  background-color: var(--secondary-background-color);
-}
-
-.technical-skills .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.technical-skills img {
-  padding-top: 40px;
-  animation: up-and-down var(--main-animation-duration) linear infinite
-    alternate;
-}
-
-@media (max-width: 991px) {
-  .technical-skills img {
-    width: 400px;
-  }
-}
-
-@media (max-width: 767px) {
-  .technical-skills img {
-    display: none;
-  }
-}
-
-.technical-skills .skills {
-  flex: 1;
-}
-
-.technical-skills .skills .skill {
-  display: flex;
-  flex-direction: column;
-}
-
-.technical-skills .skills .skill:not(:last-of-type) {
-  margin-bottom: 10px;
-}
-
-.technical-skills .skills .skill .skill-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.technical-skills .skills .skill .skill-info h3 {
-  padding-left: 10px;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition-duration: var(--main-transition-duration);
-}
-
-.technical-skills .skills .skill:hover .skill-info h3 {
-  color: var(--main-color);
-}
-
-.technical-skills .skills .skill .skill-info h3 i {
-  margin-right: 10px;
-  font-size: 2rem;
-}
-
-.technical-skills .skills .skill .skill-info span {
-  display: block;
-  font-weight: bold;
-  margin-right: 10px;
-  padding: 3px 5px;
-  border: 1px solid #ccc;
-  border-radius: var(--secondary-border-radius);
-  font-size: 0.8rem;
-  color: var(--main-color);
-  transition-duration: var(--main-transition-duration);
-}
-
-.technical-skills .skills .skill:hover .skill-info span {
-  color: white;
-  background-color: var(--main-color);
-}
-
-.technical-skills .skills .skill .progress {
-  flex-grow: 1;
-  background-color: var(--secondary-background-color);
-  height: 30px;
-  position: relative;
-}
-
-.technical-skills .skills .skill .progress span {
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-/* ______________________________________ End technical-skills Section ______________________________________ */
-
-/* ______________________________________ Start My-Works Section ______________________________________ */
-
-.my-works {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
-  background-color: var(--secondary-background-color);
-}
-
-.my-works .container {
-  display: flex;
-  align-items: center;
-  gap: 100px;
-}
-
-.my-works .main-image {
-  animation: up-and-down var(--main-animation-duration) linear infinite
-    alternate;
-}
-
-@media (max-width: 991px) {
-  .my-works .main-image {
-    display: none;
-  }
-}
-
-.my-works .works {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-}
-
-.my-works .works .work {
-  border-radius: var(--main-border-radius);
-  border: 2px solid white;
-  background-color: #f5f5f5;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  position: relative;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.my-works .works .work:after {
-  content: "";
-  position: absolute;
-  background-color: var(--secondary-background-color);
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 0;
-  height: 0;
-  transition-duration: var(--main-transition-duration);
-  z-index: -1;
-}
-
-.my-works .works .work:hover:after {
-  width: 100%;
-  height: 100%;
-}
-
-.my-works .works .work img {
-  width: 65px;
-}
-
-.my-works .works .work .text h3 {
-  font-size: 1.2rem;
-  color: var(--main-color);
-  text-transform: capitalize;
-  margin-bottom: 10px;
-}
-
-.my-works .works .work .text p {
-  font-size: 0.8rem;
-  display: flex;
-  flex-direction: column;
-  color: var(--text-color);
-  line-height: var(--secondary-line-height);
-}
-
-.my-works .works .work .text p a {
-  font-size: 0.7rem;
-  margin-top: 5px;
-  align-self: flex-end;
-  color: white;
-  background-color: var(--main-color);
-  padding: 5px 10px;
-  border-radius: var(--main-border-radius);
-  transition-duration: var(--main-transition-duration);
-}
-
-.my-works .works .work:hover .text p a {
-  color: var(--main-color);
-  background-color: #f5f5f5;
-}
-
-/* ______________________________________ End My-Works Section ______________________________________ */
-
-/* ______________________________________ Start PES-Career Section ______________________________________ */
+/* #region >> PES-Career ------------------------------------ */
 
 .pes-career {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
+  background-color: var(--secondary-background-color);
 }
 
 .pes-career .container {
@@ -1354,6 +1586,8 @@ header .meag-menu .other-links li a i {
   align-items: center;
   gap: 100px;
 }
+
+/* #region >>> Career ************************ */
 
 .pes-career .career {
   display: flex;
@@ -1466,13 +1700,15 @@ header .meag-menu .other-links li a i {
   line-height: var(--secondary-line-height);
 }
 
-/* ------------------------ Start Email Section ------------------------ */
+/* #endregion >>> Career ************************ */
+
+/* #region >>> Join-Us ************************ */
 
 .pes-career .join-us {
   width: 700px;
   display: flex;
   gap: 20px;
-  background-color: var(--secondary-background-color);
+  background-color: var(--main-background-color);
   padding: 30px;
   border-radius: 40px;
 }
@@ -1521,16 +1757,16 @@ header .meag-menu .other-links li a i {
   background-color: var(--main-color-alt);
 }
 
-/* ------------------------ End Email Section ------------------------ */
+/* #endregion >>> Join-Us ************************ */
 
-/* ______________________________________ End PES-Career Section ______________________________________ */
+/* #endregion >> PES-Career ------------------------------------ */
 
-/* ______________________________________ Start Compitions Won Section ______________________________________ */
+/* #region >> Achievements ------------------------------------ */
 
 .achievements {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
-  background-color: var(--secondary-background-color);
+  background-color: var(--main-background-color);
 }
 
 .achievements .container {
@@ -1684,316 +1920,308 @@ header .meag-menu .other-links li a i {
   color: white;
 }
 
-/* ______________________________________ End Compitions Won Section ______________________________________ */
+/* #endregion >> Achievements ------------------------------------ */
 
-/* ______________________________________ Start Certificates Section ______________________________________ */
+/* #region >> Testimonials ------------------------------------ */
 
-.certificates {
-  padding: var(--section-padding) 0px;
-}
-
-.certificates .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.certificates .image {
-  height: 500px;
-  display: flex;
-  /* border: 10px solid var(--main-color); */
-  border-radius: var(--main-border-radius);
-  /* overflow: hidden; */
-  position: relative;
-  z-index: 0;
-}
-
-@media (max-width: 991px) {
-  .certificates .image {
-    height: auto;
-    width: 90%;
-  }
-}
-
-.certificates .image:before,
-.certificates .image:after {
-  content: "";
-  position: absolute;
-  background-color: var(--main-color);
-  width: 100px;
-  height: calc(100% + 40px);
-  border-radius: var(--main-border-radius);
-  top: -20px;
-  z-index: -1;
-}
-
-.certificates .image:before {
-  left: -20px;
-}
-
-.certificates .image:after {
-  right: -20px;
-}
-
-@media (max-width: 767px) {
-  .certificates .image:before,
-  .certificates .image:after {
-    width: 50px;
-    height: calc(100% + 20px);
-    top: -10px;
-  }
-
-  .certificates .image:before {
-    left: -10px;
-  }
-
-  .certificates .image:after {
-    right: -10px;
-  }
-}
-
-.certificates .image img {
-  border-radius: var(--main-border-radius);
-  height: 100%;
-  width: 100%;
-}
-
-/* ______________________________________ End Certificates Section ______________________________________ */
-
-/* ______________________________________ Start Quizlet-Contributions Section ______________________________________ */
-
-.quizlet-contributions {
-  padding: var(--section-padding) 0 0;
+.testimonials {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
   background-color: var(--secondary-background-color);
 }
 
-/* ---------------- start stats section ---------------- */
+.testimonials .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--main-grid-gap);
+}
 
-.quizlet-contributions .stats {
+.testimonials .testimonial {
+  background-color: white;
+  padding: 20px;
+  border-radius: var(--main-border-radius);
+  position: relative;
+  box-shadow: var(--main-box-shadow);
+  transition-duration: var(--main-transition-duration);
+  z-index: 0;
+}
+
+.testimonials .testimonial:hover {
+  color: white;
+}
+
+.testimonials .testimonial:after {
+  content: "";
+  position: absolute;
+  background-color: var(--main-color);
+  border-radius: inherit;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  transition-duration: var(--main-transition-duration);
+  z-index: -1;
+}
+
+.testimonials .testimonial:hover:after {
+  width: 100%;
+}
+
+.testimonials .testimonial img {
+  object-fit: cover;
+  background-color: var(--secondary-background-color);
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  outline: 10px solid var(--secondary-background-color);
+  transition-duration: var(--main-transition-duration);
+}
+
+.testimonials .testimonial:hover img {
+  top: 25px;
+}
+
+.testimonials .testimonial h3 {
+  color: var(--main-color);
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  transition-duration: var(--main-transition-duration);
+}
+
+.testimonials .testimonial:hover h3 {
+  color: white;
+}
+
+.testimonials .testimonial span {
+  text-transform: capitalize;
+  color: var(--text-color);
+  display: block;
+  margin-bottom: 10px;
+  transition-duration: var(--main-transition-duration);
+}
+
+.testimonials .testimonial:hover span {
+  color: white;
+}
+
+.testimonials .testimonial .rate {
+  margin-bottom: 10px;
+}
+
+.testimonials .testimonial .rate .filled {
+  color: #ffc107;
+}
+
+.testimonials .testimonial p {
+  color: var(--text-color);
+  font-size: 0.9rem;
+  line-height: var(--secondary-line-height);
+  transition-duration: var(--main-transition-duration);
+}
+
+.testimonials .testimonial:hover p {
+  color: white;
+}
+
+/* #endregion >> Testimonials ------------------------------------ */
+
+/* #region >> Footer ------------------------------------ */
+
+footer {
+  background-color: #191919;
+  overflow: hidden;
+  color: #b9b9b9;
+}
+
+@media (max-width: 767px) {
+  footer {
+    text-align: center;
+  }
+}
+
+footer a {
+  color: #b9b9b9;
+}
+
+footer .container {
+  padding-top: 100px;
+  padding-bottom: 100px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: var(--main-grid-gap);
-  margin-bottom: 100px;
 }
 
-.quizlet-contributions .stats .box {
+/* #region >>> Main-Info ************************ */
+
+footer .main-info h3 {
+  color: white;
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+
+footer .main-info .main-links {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+@media (max-width: 767px) {
+  footer .main-info .main-links {
+    justify-content: center;
+  }
+}
+
+footer .main-info .main-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  background-color: #313131;
+  border-radius: var(--main-border-radius);
+  transition-duration: var(--main-transition-duration);
+}
+
+footer .main-info .main-links a:hover {
+  color: white;
+}
+
+footer .main-info .main-links a.linkedin:hover {
+  background-color: #0a66c2;
+}
+
+footer .main-info .main-links a.github:hover {
+  background-color: #fafbfc;
+  color: #313131;
+}
+
+footer .main-info .main-links a.facebook:hover {
+  background-color: #3b5998;
+}
+
+footer .main-info .description {
+  line-height: 2;
+}
+
+/* #endregion >>> Main-Info ************************ */
+
+/* #region >>> Other-Links ************************ */
+
+footer .other-links li {
+  padding: 15px 0;
+}
+
+footer .other-links li:not(:last-child) {
+  border-bottom: 1px solid #b9b9b9;
+}
+
+footer .other-links a {
+  display: block;
+  text-transform: capitalize;
+  transition-duration: var(--main-transition-duration);
+}
+
+footer .other-links a:hover {
+  color: white;
+  transform: translateX(10px);
+}
+
+footer .other-links a:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f101";
+  font-weight: 900;
+  color: var(--main-color);
+  margin-right: 10px;
+}
+
+/* #endregion >>> Other-Links ************************ */
+
+/* #region >>> Contact-Info ************************ */
+
+footer .contact-info {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-evenly; */
-  align-items: center;
-  padding: 30px;
-  background-color: var(--main-background-color);
-  position: relative;
-  opacity: 0.8;
-  transition-duration: var(--main-transition-duration);
+  gap: 40px;
 }
 
-.quizlet-contributions .stats .box:hover {
-  opacity: unset;
-}
-
-.quizlet-contributions .stats .box:before,
-.quizlet-contributions .stats .box:after {
-  content: "";
-  position: absolute;
-  width: 2px;
-  height: 0;
-  background-color: var(--main-color);
-  transition-duration: var(--main-transition-duration);
-}
-
-.quizlet-contributions .stats .box:hover:before,
-.quizlet-contributions .stats .box:hover:after {
-  height: 100%;
-}
-
-.quizlet-contributions .stats .box:before {
-  left: 0;
-  bottom: 0;
-}
-
-.quizlet-contributions .stats .box:after {
-  right: 0;
-  top: 0;
-}
-
-.quizlet-contributions .stats .box i {
-  font-size: 30px;
-}
-
-.quizlet-contributions .stats .box .number {
-  margin: 10px 0;
-  font-weight: 700;
-  font-size: 2.5rem;
-}
-
-.quizlet-contributions .stats .box .title {
-  font-weight: bold;
-  text-transform: capitalize;
-  font-size: 1.5rem;
-  color: var(--main-color);
-}
-
-/* ---------------- end stats section ---------------- */
-
-/* ---------------- start holder section ---------------- */
-.quizlet-contributions .holder {
+footer .contact-info .line {
   display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 15px;
 }
 
-@media (max-width: 991px) {
-  .quizlet-contributions .holder {
+@media (max-width: 767px) {
+  footer .contact-info .line {
     flex-direction: column;
   }
 }
 
-.quizlet-contributions .holder > div {
-  padding: 100px 50px;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-@media (max-width: 991px) {
-  .quizlet-contributions .holder > div {
-    width: 100%;
-  }
-}
-
-.quizlet-contributions .holder > div > h3 {
-  text-transform: capitalize;
-  font-size: 2rem;
-  font-weight: 900;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-  position: relative;
-}
-
-/* left section */
-.quizlet-contributions .holder .left-section {
-  color: white;
-  background-image: url(../images/discount-background1.jpg);
-  text-align: center;
-  position: relative;
-  z-index: 0;
-}
-
-.quizlet-contributions .holder .left-section:after {
-  content: "";
-  position: absolute;
-  background-color: rgb(23 135 224 / 97%);
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;  
-}
-
-.quizlet-contributions .holder .right-section {
-  background-color: white;
-}
-
-.quizlet-contributions .holder .left-section p {
-  line-height: var(--paragraph-line-height);
-  font-size: 1.1rem;
-}
-
-.quizlet-contributions .holder .left-section a {
-  width: 80%;
-}
-
-.quizlet-contributions .holder .left-section img {
-  max-width: 100%;
-  margin-bottom: -100px;
-}
-
-/* right section */
-.quizlet-contributions .right-section .quizlet-classes {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-}
-
-.quizlet-contributions .right-section > h3:after {
-  content: "";
-  position: absolute;
-  background-color: var(--main-color);
-  width: calc(100% + 20px);
-  height: 5px;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.quizlet-contributions .right-section .quizlet-class {
-  border: 3px solid var(--secondary-background-color);
-  width: 100%;
-  position: relative;
-  background-color: var(--secondary-background-color);
-  border-radius: var(--main-border-radius);
-  padding: 10px;
-  z-index: 0;
-}
-
-.quizlet-contributions .right-section .quizlet-class:after {
-  content: "";
-  position: absolute;
-  background-color: white;
-  height: 0;
-  width: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition-duration: var(--main-transition-duration);
-  z-index: -1;
-}
-
-.quizlet-contributions .right-section .quizlet-class:hover:after {
-  height: 100%;
-  width: 100%;
-}
-
-.quizlet-contributions .right-section .quizlet-class h4 {
-  text-transform: uppercase;
+footer .contact-info .line i {
+  font-size: 1.5rem;
   color: var(--main-color);
-  font-size: 1.2rem;
-  margin-bottom: 10px;
 }
 
-.quizlet-contributions .right-section .quizlet-class p {
-  color: var(--text-color);
-  margin-bottom: 35px;
-  font-size: 0.8rem;
+footer .contact-info .line .info {
   line-height: var(--secondary-line-height);
 }
 
-.quizlet-contributions .right-section .quizlet-class a {
-  text-transform: capitalize;                                                               
-  position: absolute;
-  font-size: 0.7rem;
-  padding: 5px 10px;
+footer .contact-info .line .info span {
   color: var(--main-color);
-  background-color: white;
-  border-radius: var(--secondary-border-radius);
-  right: 10px;
-  bottom: 10px;
+  font-weight: bold;
+}
+
+footer .contact-info .line .info a {
   transition-duration: var(--main-transition-duration);
 }
 
-.quizlet-contributions .right-section .quizlet-class:hover a {
-  color: white;
-  background-color: var(--main-color);
+footer .contact-info .line .info a:hover {
+  color: var(--main-color);
 }
 
-/* ---------------- end holder section ---------------- */
+/* #endregion >>> Contact-Info ************************ */
 
-/* ______________________________________ End Quizlet-Contributions Section ______________________________________ */
+/* #region >>> Footer-Galary ************************ */
 
-/* ______________________________________ Start Animation ______________________________________ */
+footer .footer-galary {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  height: fit-content;
+}
+
+footer .footer-galary img {
+  max-width: 100%;
+  border: 3px solid white;
+}
+
+footer p.copyright {
+  border-top: 1px solid #9b9b9b;
+  color: white;
+  text-transform: capitalize;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p.copyright span {
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+/* #endregion >>> Footer-Galary ************************ */
+
+/* #endregion >> Footer ------------------------------------ */
+
+/* #region >> Animation ------------------------------------ */
+
 @keyframes up-and-down {
   0% {
     transform: translateY(-10px);
@@ -2058,4 +2286,4 @@ header .meag-menu .other-links li a i {
   }
 }
 
-/* ______________________________________ End Animation ______________________________________ */
+/* #endregion >> Animation ------------------------------------ */
