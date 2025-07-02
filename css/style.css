@@ -174,10 +174,18 @@ input[type="submit"] {
   right: 0;
   width: 100%;
   height: 30px;
-  background-image: linear-gradient(135deg, var(--main-background-color) 25%, transparent 25%),
-  linear-gradient(225deg, var(--main-background-color) 25%, transparent 25%);
   background-size: 30px 30px;
   z-index: 1;
+}
+
+.spikes-white:after {
+  background-image: linear-gradient(135deg, var(--main-background-color) 25%, transparent 25%),
+  linear-gradient(225deg, var(--main-background-color) 25%, transparent 25%);
+}
+
+.spikes-gray:after {
+  background-image: linear-gradient(135deg, var(--secondary-background-color) 25%, transparent 25%),
+  linear-gradient(225deg, var(--secondary-background-color) 25%, transparent 25%);
 }
 
 /* #endregion >>> Spikes ************************ */
@@ -233,6 +241,7 @@ header .container {
 /* #region >>> Logo ************************ */
 
 header .logo {
+  text-transform: uppercase;
   color: var(--main-color);
   font-weight: bold;
   font-size: 1.5rem;
@@ -282,7 +291,7 @@ header .main-nav > li > a {
 
 @media (max-width: 767px) {
   header .main-nav > li > a {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     height: 30px;
     padding: 10px;
     justify-content: flex-start;
@@ -457,12 +466,20 @@ header .meag-menu .other-links li a i {
   font-size: 2rem;
   letter-spacing: -2px;
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .landing .text h2 {
     font-size: 1.5rem;
+    justify-content: center;
   }
+}
+
+.landing .text h2 i {
+  color: var(--main-color);
 }
 
 .landing .text p {
