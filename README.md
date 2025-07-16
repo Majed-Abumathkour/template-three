@@ -66,7 +66,7 @@ As mentioned in [this video](https://www.youtube.com/watch?reload=9&v=S2EYoJAIts
 - Keep the identity of the original design
 - No licensing concerns
 
-Also, special thanks to **Abed-Alrahman Alkwalda** for supporting and contributing to this project.
+Also, special thanks to **Abed-Alrahman Alkawalda** for supporting and contributing to this project.
 
 ---
 
@@ -97,7 +97,6 @@ Here are the features and bugs I'm still working on:
 
 - Improve **site performance**
 - Enhance **accessibility**
-- Replace **mega menu icons** with more relevant ones
 - Update **landing text** to suit the website content
 - Replace landing image with **personal image + animation**
 - Replace **Articles** section with a **Courses** section
@@ -111,7 +110,6 @@ Here are the features and bugs I'm still working on:
 - Make **PES Career** section dynamic with JavaScript
 - Connect backend for **Join Us** email submission
 - Fix empty or incorrect links in the **Achievements** section
-- Check spelling (e.g. **Juventus**) and update
 - Improve testimonials, especially for **Karim** and **Abed Goal**
 - Fix and test all **footer links**
 - Add **WhatsApp** link in the footer

@@ -544,20 +544,20 @@ header .meag-menu .other-links li a i {
 
 /* #endregion >> Landing ------------------------------------ */
 
-/* #region >> Articles  ------------------------------------ */
+/* #region >> courses  ------------------------------------ */
 
-.articles {
+.courses {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
 }
 
-.articles .container {
+.courses .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 30px;
 }
 
-.articles .article {
+.courses .course {
   border-radius: var(--main-border-radius);
   overflow: hidden;
   box-shadow: 0 2px 15px hsla(0, 0%, 0%, 0.1);
@@ -566,36 +566,36 @@ header .meag-menu .other-links li a i {
     box-shadow var(--main-transition-duration);
 }
 
-.articles .article:hover {
+.courses .course:hover {
   transform: translateY(-10px);
   box-shadow: 0 2px 15px hsla(0, 0%, 0%, 0.2);
 }
 
-.articles .article > :not(img) {
+.courses .course > :not(img) {
   padding-left: 10px;
   padding-right: 10px;
 }
 
-.articles .article img {
+.courses .course img {
   max-width: 100%;
 }
 
-.articles .article .content {
+.courses .course .content {
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-.articles .article .content h3 {
+.courses .course .content h3 {
   text-transform: capitalize;
   margin-bottom: 10px;
 }
 
-.articles .article .content p {
+.courses .course .content p {
   color: var(--text-color);
   line-height: var(--secondary-line-height);
 }
 
-.articles .article .info {
+.courses .course .info {
   position: relative;
   color: var(--main-color);
   padding-top: 10px;
@@ -603,27 +603,27 @@ header .meag-menu .other-links li a i {
   border-top: 1px solid var(--secondary-background-color);
 }
 
-.articles .article .info a {
+.courses .course .info a {
   text-transform: capitalize;
   color: var(--main-color);
   font-weight: bold;
 }
 
-.articles .article .info i {
+.courses .course .info i {
   position: absolute;
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.articles .article:hover .info i {
+.courses .course:hover .info i {
   animation-iteration-count: infinite;
   animation-name: left-and-right;
   animation-duration: calc(var(--main-animation-duration) / 2);
   animation-timing-function: linear;
 }
 
-/* #endregion >> Articles  ------------------------------------ */
+/* #endregion >> courses  ------------------------------------ */
 
 /* #region >> Languages ------------------------------------ */
 
