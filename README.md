@@ -21,7 +21,7 @@ To download or view the source code and materials used, visit:
 
 ## 📸 Screenshots
 
-![Homepage Screenshot](images/add-the-link-here)
+![Homepage Screenshot](images/homepage-screenshot.png)
 
 ---
 
