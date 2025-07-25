@@ -97,10 +97,7 @@ Here are the features and bugs I'm still working on:
 
 - Improve **site performance**
 - Enhance **accessibility**
-- Update **landing text** to suit the website content
 - Replace landing image with **personal image + animation**
-- Replace **Articles** section with a **Courses** section
-- Remove or update **empty links** in the Languages section
 - Add real data to the **Soft Skills** section
 - Fix or customize **"Details"** links
 - Add missing link in **Nassouhy Challenge**
@@ -112,7 +109,6 @@ Here are the features and bugs I'm still working on:
 - Fix empty or incorrect links in the **Achievements** section
 - Improve testimonials, especially for **Karim** and **Abed Goal**
 - Fix and test all **footer links**
-- Add **WhatsApp** link in the footer
 
 ---
 
