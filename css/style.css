@@ -980,7 +980,7 @@ header .meag-menu .other-links li a i {
 
 .soft-skills .skill .info {
   position: relative;
-  padding: 15px;
+  padding: 25px;
   background-color: #f9f9f9;
   text-align: right;
   z-index: 0;
@@ -1008,17 +1008,13 @@ header .meag-menu .other-links li a i {
 .soft-skills .skill .info:after {
   content: "";
   position: absolute;
-  width: 40px;
+  width: 50px;
   height: 100%;
   background-color: #d5d5d5;
   left: 80px;
   bottom: 0;
   transform: skewX(-30deg);
   z-index: -1;
-}
-
-.soft-skills .skill .info a {
-  color: var(--main-color);
 }
 
 /* #endregion >> Soft-Skills ------------------------------------ */
