@@ -101,12 +101,10 @@ Here are the features and bugs I'm still working on:
 - Add missing link in **Nassouhy Challenge**
 - Add JavaScript functionality to **shuffle certificates**
 - Fix **Quizlet Contributions** data
-- Add links and capitalize descriptions in **Favorite Games**
+- Add links in **Favorite Games**
 - Make **PES Career** section dynamic with JavaScript
 - Connect backend for **Join Us** email submission
-- Fix empty or incorrect links in the **Achievements** section
 - Improve testimonials, especially for **Karim** and **Abed Goal**
-- Fix and test all **footer links**
 
 ---
 
