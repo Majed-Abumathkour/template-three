@@ -98,7 +98,6 @@ Here are the features and bugs I'm still working on:
 - Improve **site performance**
 - Enhance **accessibility**
 - Replace landing image with **personal image + animation**
-- Add missing link in **Nassouhy Challenge**
 - Add JavaScript functionality to **shuffle certificates**
 - Fix **Quizlet Contributions** data
 - Add links in **Favorite Games**
