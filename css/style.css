@@ -254,6 +254,7 @@ header .logo {
 
 @media (max-width: 991px) {
   header .logo {
+    width: 100%;
     font-size: 1rem;
   }
 }
